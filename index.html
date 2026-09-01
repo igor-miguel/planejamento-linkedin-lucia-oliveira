@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plano LinkedIn 90 Dias — Lucia Oliveira · Instituto Eleve o Ser</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --uva:#1A1218; --latao:#9C8252; --latao-cl:#C4A96A; --marmore:#E8E2D5;
+  --marmore-s:#F4EFE6; --terra:#3A2B26; --vinho:#5E4346; --amarelo:#8B7A1A;
+  --azul:#2C4A6E; --verde:#2E6B4F; --vermelho:#A3423C;
+}
+body{font-family:'Montserrat',sans-serif;background:#E4DED2;color:var(--terra);
+  -webkit-print-color-adjust:exact;print-color-adjust:exact;font-weight:300}
+.page{width:100%;max-width:1000px;margin:0 auto;background:var(--marmore-s);box-shadow:0 4px 48px rgba(26,18,24,.16)}
+
+/* CAPA */
+.cover{background:var(--uva);padding:80px 72px 64px;position:relative;overflow:hidden}
+.cover::before{content:'';position:absolute;right:-120px;top:-120px;width:420px;height:420px;
+  border-radius:50%;border:1px solid rgba(156,130,82,.14)}
+.cover::after{content:'';position:absolute;right:20px;bottom:-140px;width:280px;height:280px;
+  border-radius:50%;border:1px solid rgba(156,130,82,.10)}
+.cv-logo{font-family:'Cinzel',serif;font-size:11px;font-weight:700;letter-spacing:6px;color:var(--latao)}
+.cv-rule{width:56px;height:2px;background:var(--latao);margin:14px 0 52px}
+.cv-eyebrow{font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;
+  color:var(--latao-cl);margin-bottom:18px}
+.cover h1{font-family:'Philosopher',serif;font-size:50px;font-weight:700;color:var(--marmore);
+  line-height:1.12;margin-bottom:14px}
+.cover h1 em{font-style:italic;color:var(--latao-cl)}
+.cv-sub{font-family:'Philosopher',serif;font-size:20px;color:rgba(232,226,213,.62);margin-bottom:44px}
+.cv-line{height:1px;background:rgba(156,130,82,.22);margin-bottom:28px}
+.cv-tags{display:flex;gap:10px;flex-wrap:wrap}
+.cv-tag{font-family:'Cinzel',serif;font-size:9px;font-weight:600;letter-spacing:2px;
+  color:var(--latao);border:1px solid rgba(156,130,82,.35);padding:7px 14px;border-radius:1px}
+.cv-meta{margin-top:40px;font-size:11px;color:rgba(232,226,213,.42);letter-spacing:.5px;line-height:2}
+.cv-meta b{color:var(--latao-cl);font-weight:600}
+
+/* SEÇÕES */
+.sec{padding:64px 72px;border-bottom:1px solid rgba(156,130,82,.16)}
+.sec:last-of-type{border-bottom:none}
+.sec-head{margin-bottom:36px}
+.sec-num{font-family:'Cinzel',serif;font-size:10px;font-weight:700;letter-spacing:4px;color:var(--latao)}
+.sec-title{font-family:'Philosopher',serif;font-size:32px;font-weight:700;color:var(--uva);
+  margin-top:8px;line-height:1.2}
+.sec-title em{font-style:italic;color:var(--vinho)}
+.sec-rule{width:100%;height:1px;background:linear-gradient(to right,var(--latao),transparent);
+  opacity:.4;margin-top:16px}
+.sec-lead{font-size:14px;line-height:1.85;color:var(--terra);margin-top:20px;max-width:780px}
+h3{font-family:'Philosopher',serif;font-size:20px;font-weight:700;color:var(--uva);
+  margin:38px 0 14px;padding-bottom:8px;border-bottom:1px solid rgba(156,130,82,.18)}
+h4{font-family:'Cinzel',serif;font-size:10px;font-weight:700;letter-spacing:3px;
+  color:var(--latao);margin:26px 0 10px;text-transform:uppercase}
+p{font-size:13.5px;line-height:1.85;margin-bottom:12px}
+strong{font-weight:600;color:var(--uva)}
+em.q{font-family:'Philosopher',serif;font-style:italic;color:var(--vinho)}
+ul{margin:10px 0 14px 20px}li{font-size:13.5px;line-height:1.8;margin-bottom:7px}
+
+/* TABELAS */
+.tw{overflow-x:auto;margin:16px 0 22px}
+table{width:100%;border-collapse:collapse;font-size:12.5px;background:#fff}
+th{background:var(--uva);color:var(--marmore);font-family:'Cinzel',serif;font-size:9px;
+  font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:12px 14px;text-align:left}
+td{padding:12px 14px;border-bottom:1px solid rgba(156,130,82,.14);vertical-align:top;line-height:1.65}
+tr:last-child td{border-bottom:none}
+tbody tr:nth-child(even){background:rgba(244,239,230,.7)}
+td.kw{font-family:'Cinzel',serif;font-weight:700;color:var(--latao);letter-spacing:1.5px;white-space:nowrap}
+td.num{font-family:'Philosopher',serif;font-weight:700;color:var(--vinho);text-align:center;width:38px}
+
+/* CAIXAS */
+.box{background:#fff;border-left:4px solid var(--latao);padding:22px 26px;margin:20px 0;
+  box-shadow:0 2px 14px rgba(58,43,38,.05)}
+.box.alerta{border-left-color:var(--vermelho);background:#FBF3F2}
+.box.ok{border-left-color:var(--verde);background:#F2F7F4}
+.box.azul{border-left-color:var(--azul);background:#F2F5F9}
+.box.dark{background:var(--uva);border-left-color:var(--latao)}
+.box.dark p,.box.dark li{color:rgba(232,226,213,.82)}
+.box.dark strong{color:var(--latao-cl)}
+.box-lbl{font-family:'Cinzel',serif;font-size:9px;font-weight:700;letter-spacing:2.5px;
+  color:var(--latao);margin-bottom:8px;text-transform:uppercase}
+.box.alerta .box-lbl{color:var(--vermelho)}
+.box.ok .box-lbl{color:var(--verde)}
+.box.azul .box-lbl{color:var(--azul)}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+
+.quote{font-family:'Philosopher',serif;font-size:19px;font-style:italic;color:var(--uva);
+  line-height:1.55;padding:22px 0 22px 26px;border-left:3px solid var(--latao);margin:22px 0}
+.quote span{color:var(--latao);font-style:normal;font-size:12px;font-family:'Montserrat',sans-serif;
+  display:block;margin-top:10px;letter-spacing:.5px}
+
+/* GRIDS */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0}
+.card{background:#fff;padding:20px 22px;border-top:2px solid var(--latao);
+  box-shadow:0 2px 14px rgba(58,43,38,.05)}
+.card.vinho{border-top-color:var(--vinho)}
+.card.azul{border-top-color:var(--azul)}
+.card-lbl{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;color:var(--latao);margin-bottom:6px}
+.card.vinho .card-lbl{color:var(--vinho)}.card.azul .card-lbl{color:var(--azul)}
+.card-t{font-family:'Philosopher',serif;font-size:17px;font-weight:700;color:var(--uva);margin-bottom:8px}
+.card p{font-size:12.5px;line-height:1.75;margin-bottom:0}
+.stat{background:var(--uva);padding:22px;text-align:center}
+.stat-n{font-family:'Philosopher',serif;font-size:34px;font-weight:700;color:var(--latao-cl);line-height:1}
+.stat-l{font-size:10.5px;color:rgba(232,226,213,.62);line-height:1.6;margin-top:8px}
+
+/* SEMANAS */
+.week{background:#fff;margin-bottom:14px;box-shadow:0 2px 14px rgba(58,43,38,.05)}
+.week-h{background:var(--uva);padding:12px 22px;display:flex;justify-content:space-between;align-items:center}
+.week-n{font-family:'Cinzel',serif;font-size:10px;font-weight:700;letter-spacing:3px;color:var(--latao)}
+.week-t{font-family:'Philosopher',serif;font-size:14px;color:var(--marmore);font-style:italic}
+.post{display:grid;grid-template-columns:78px 92px 1fr;gap:16px;padding:14px 22px;
+  border-bottom:1px solid rgba(156,130,82,.12);align-items:start}
+.post:last-child{border-bottom:none}
+.post-d{font-family:'Cinzel',serif;font-size:9px;letter-spacing:1.5px;color:var(--terra);opacity:.6;padding-top:2px}
+.fase{font-family:'Cinzel',serif;font-size:8.5px;font-weight:700;letter-spacing:1.5px;
+  padding:4px 8px;text-align:center;border-radius:1px}
+.fase.topo{background:rgba(44,74,110,.12);color:var(--azul)}
+.fase.meio{background:rgba(156,130,82,.16);color:#7A6640}
+.fase.fundo{background:rgba(94,67,70,.14);color:var(--vinho)}
+.post-c .h{font-size:13px;line-height:1.6;color:var(--uva);font-weight:500}
+.post-c .m{font-size:11px;color:rgba(58,43,38,.6);margin-top:5px}
+.post-c .m b{font-family:'Cinzel',serif;font-weight:700;color:var(--latao);letter-spacing:1px}
+
+/* ENCONTROS */
+.enc{display:grid;grid-template-columns:64px 1fr;gap:20px;padding:20px 0;
+  border-bottom:1px solid rgba(156,130,82,.16)}
+.enc:last-child{border-bottom:none}
+.enc-n{font-family:'Philosopher',serif;font-size:30px;font-weight:700;color:var(--latao);
+  line-height:1;text-align:center;padding-top:2px}
+.enc-n small{display:block;font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.5px;
+  color:rgba(58,43,38,.5);margin-top:5px;font-weight:600}
+.enc-t{font-family:'Philosopher',serif;font-size:18px;font-weight:700;color:var(--uva);margin-bottom:4px}
+.enc-p{font-size:12.5px;line-height:1.8;margin-bottom:8px;color:var(--terra)}
+.enc-e{font-size:11.5px;color:var(--vinho);background:rgba(94,67,70,.07);
+  padding:8px 12px;border-left:2px solid var(--vinho);line-height:1.7}
+.enc-e b{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:2px;color:var(--vinho);
+  display:block;margin-bottom:3px;font-weight:700}
+
+/* CHECKLIST */
+.chk{background:#fff;padding:0;margin:16px 0;box-shadow:0 2px 14px rgba(58,43,38,.05)}
+.chk-i{display:flex;gap:14px;padding:13px 22px;border-bottom:1px solid rgba(156,130,82,.12);align-items:flex-start}
+.chk-i:last-child{border-bottom:none}
+.chk-b{width:15px;height:15px;border:1.5px solid var(--latao);flex-shrink:0;margin-top:2px;border-radius:1px}
+.chk-c{flex:1}
+.chk-c .t{font-size:13px;color:var(--uva);font-weight:500;line-height:1.5}
+.chk-c .d{font-size:11.5px;color:rgba(58,43,38,.62);margin-top:4px;line-height:1.65}
+.chk-w{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:1.5px;color:var(--latao);
+  padding-top:3px;white-space:nowrap;font-weight:600}
+
+/* POSTS PRONTOS */
+.pp{background:#fff;margin-bottom:26px;box-shadow:0 2px 18px rgba(58,43,38,.07)}
+.pp-h{background:var(--uva);padding:16px 26px}
+.pp-h .l{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2.5px;color:var(--latao);margin-bottom:5px}
+.pp-h .t{font-family:'Philosopher',serif;font-size:18px;color:var(--marmore)}
+.pp-meta{display:flex;gap:8px;padding:12px 26px;background:rgba(156,130,82,.07);flex-wrap:wrap;
+  border-bottom:1px solid rgba(156,130,82,.14)}
+.pp-tag{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:1.5px;color:var(--vinho);
+  background:#fff;border:1px solid rgba(156,130,82,.28);padding:4px 10px;font-weight:600}
+.pp-body{padding:24px 26px;font-size:13.5px;line-height:1.9;white-space:pre-wrap;color:var(--terra)}
+.pp-cri{padding:20px 26px;background:var(--marmore-s);border-top:1px solid rgba(156,130,82,.2)}
+.pp-cri .l{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2.5px;color:var(--latao);margin-bottom:10px}
+.pp-cri p{font-size:12.5px;line-height:1.8}
+.faixa{background:var(--latao);color:var(--uva);padding:11px 18px;font-size:12.5px;
+  font-weight:600;margin-top:12px;text-align:center;letter-spacing:.3px}
+
+/* FOOTER */
+.foot{background:var(--uva);padding:48px 72px;text-align:center}
+.foot-sig{font-family:'Great Vibes',cursive;font-size:34px;color:var(--latao-cl);margin-bottom:6px}
+.foot-i{font-family:'Cinzel',serif;font-size:9px;letter-spacing:4px;color:rgba(156,130,82,.6)}
+.foot-d{font-size:10.5px;color:rgba(232,226,213,.32);margin-top:22px;line-height:1.9}
+
+@media(max-width:1000px){
+  .page{width:100%}.sec,.cover,.foot{padding-left:28px;padding-right:28px}
+  .g2,.g3{grid-template-columns:1fr}.cover h1{font-size:34px}.sec-title{font-size:25px}
+  .post{grid-template-columns:1fr;gap:6px}.enc{grid-template-columns:1fr;gap:8px}
+  .enc-n{text-align:left}
+  .fase{justify-self:start;min-width:82px}
+  .post-d{opacity:.75}
+}
+
+/* ══════════ IMPRESSÃO A4 (não afeta a versão web) ══════════ */
+@media print{
+  @page{size:A4;margin:13mm 12mm 15mm}
+  html,body{background:#fff!important}
+  .page{width:100%!important;max-width:none!important;box-shadow:none!important;background:#fff!important}
+
+  /* o media query de 1000px pega no print — restaurar as grades em mm */
+  .post{grid-template-columns:15mm 20mm 1fr!important;gap:5mm!important;align-items:start!important}
+  .fase{justify-self:stretch!important;min-width:0!important}
+  .post-d{opacity:.6!important}
+  .enc{grid-template-columns:14mm 1fr!important;gap:6mm!important}
+  .enc-n{text-align:center!important}
+  .g2{grid-template-columns:1fr 1fr!important}
+  .g3{grid-template-columns:repeat(3,1fr)!important}
+
+  /* capa e rodapé ocupam a página inteira */
+  .cover{page-break-after:always;padding:30mm 18mm!important;margin:-13mm -12mm 0!important;
+    min-height:282mm!important;display:flex!important;flex-direction:column!important;justify-content:center!important}
+  .foot{page-break-before:always;padding:30mm 18mm!important;margin:0 -12mm -15mm!important;
+    min-height:282mm!important;display:flex!important;flex-direction:column!important;justify-content:center!important}
+
+  /* cada seção começa em página nova */
+  .sec{page-break-before:always;padding:0 0 4mm 0!important;border-bottom:none!important}
+
+  /* nada pode ser cortado ao meio */
+  .box,.card,.quote,.stat,.week,.pp-h,.pp-meta,.pp-cri,.chk,.chk-i,.prio,.niv,
+  .enc,.post,table,tr,.tw{break-inside:avoid;page-break-inside:avoid}
+  h2,h3,h4,.sec-head{break-after:avoid;page-break-after:avoid}
+  .pp{page-break-inside:auto}
+  .pp-h{page-break-after:avoid}
+  .pp-body{orphans:3;widows:3}
+
+  /* proporções pra caber na largura útil de 186mm */
+  .cover h1{font-size:36px!important}
+  .sec-title{font-size:23px!important}
+  h3{font-size:17px!important}
+  p,li,.sec-lead{font-size:10.5px!important;line-height:1.72!important}
+  table{font-size:9.5px!important}
+  th,td{padding:7px 9px!important}
+  .post-c .h{font-size:11px!important}
+  .post-c .m{font-size:9.5px!important}
+  .pp-body{font-size:11px!important;line-height:1.78!important}
+  .enc-t{font-size:15px!important}
+  .enc-p,.enc-e{font-size:10px!important}
+  .card p{font-size:10px!important}
+  .chk-c .t{font-size:11px!important}
+  .chk-c .d{font-size:10px!important}
+  .prio-t{font-size:10.5px!important}
+  .prio-d{font-size:9.5px!important}
+}
+
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ══════════ CAPA ══════════ -->
+<div class="cover">
+  <div class="cv-logo">INSTITUTO ELEVE O SER</div>
+  <div class="cv-rule"></div>
+  <div class="cv-eyebrow">Demanda Infinita® · Plano de Ação</div>
+  <h1>90 dias para a<br>camada de liderança<br>virar <em>pipeline</em>.</h1>
+  <div class="cv-sub">LinkedIn B2B · Lucia Oliveira · Instituto Eleve o Ser</div>
+  <div class="cv-line"></div>
+  <div class="cv-tags">
+    <span class="cv-tag">POSICIONAMENTO</span>
+    <span class="cv-tag">8 DORES B2B</span>
+    <span class="cv-tag">ANÁLISE DE OFERTA</span>
+    <span class="cv-tag">SSI</span>
+    <span class="cv-tag">8 LEAD MAGNETS</span>
+    <span class="cv-tag">36 POSTS</span>
+    <span class="cv-tag">12 ENCONTROS</span>
+  </div>
+  <div class="cv-meta">
+    Comprador: <b>RH · DHO · People · Diretoria</b> &nbsp;·&nbsp; Beneficiário: <b>coordenadores, gerentes e heads</b><br>
+    Construído a partir de <b>9 documentos</b> da Lucia &nbsp;·&nbsp; 25 de agosto de 2026
+  </div>
+</div>
+
+<!-- ══════════ 01 ══════════ -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-num">SEÇÃO 01</div>
+    <div class="sec-title">O que os documentos dizem — e onde eles <em>se contradizem</em></div>
+    <div class="sec-rule"></div>
+  </div>
+
+  <p>Este plano nasceu da leitura integral de nove documentos: os dois briefings de público (PF e LinkedIn), o mapa estratégico corporativo, o documento de posicionamento, o produto com pilares e dores, a narrativa pessoal da Lucia, o brandbook do Instituto, o arquivo de bios e templates, e a proposta comercial enviada ao Grupo Recovery.</p>
+
+  <p>Eles são bons. Mas <strong>não contam a mesma história</strong> — e essa contradição é a primeira coisa a resolver, porque ela decide tudo que vem depois.</p>
+
+  <div class="tw"><table>
+    <thead><tr><th style="width:32%">Documento</th><th>Para quem ele diz que é o cliente</th></tr></thead>
+    <tbody>
+      <tr><td><strong>briefinf-publico PF</strong></td><td>O líder pessoa física — coordenador, gerente, empreendedor. Produto digital.</td></tr>
+      <tr><td><strong>Produto_pilares_dores (PF)</strong></td><td>O líder, com 40+ dores físicas, mentais e emocionais mapeadas.</td></tr>
+      <tr><td><strong>Briefing_publico Linkedin</strong></td><td>Inverte: <em class="q">"O líder é quem vive o problema. O RH e o executivo são quem sente o impacto organizacional, tem orçamento e procura uma solução."</em></td></tr>
+      <tr><td><strong>Mapeamento_estrategia_CORP</strong></td><td>RH e diretoria — dores premium de quem controla orçamento.</td></tr>
+      <tr><td><strong>posicionamento_e_mapaestrategico</strong></td><td>Empresas. Compradores: RH, BP, T&amp;D, diretores, CEOs, sócios.</td></tr>
+      <tr><td><strong>Proposta Recovery (PDF)</strong></td><td>Empresa. R$ 15.000 / R$ 21.000 / R$ 27.000 <strong>por participante</strong>, aos cuidados do RH.</td></tr>
+      <tr><td><strong>bios_linkedin_apresentacao</strong></td><td>Empresas médias e grandes — e proíbe explicitamente falar de autoconhecimento no contexto corporativo.</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="box alerta">
+    <div class="box-lbl">A decisão que destrava o plano</div>
+    <p><strong>O LinkedIn da Lucia é B2B.</strong> Comprador = RH / DHO / People / Diretor Executivo. Beneficiário = o líder.</p>
+    <p>Não é uma preferência estética: é o único eixo que sustenta um ticket de R$15.000 a R$27.000 já precificado e em negociação. O caminho PF (vender mentoria direto pro líder) exigiria outro preço, outro ciclo e outro canal — e abandonaria a única oferta que já existe com número.</p>
+    <p style="margin-top:10px"><strong>O que não muda:</strong> o líder continua sendo o personagem de toda história. Só que o post é escrito para quem assina o cheque.</p>
+  </div>
+
+  <h3>A segunda contradição: dois vocabulários na mesma marca</h3>
+  <p>O brandbook do Instituto define o tom como <em class="q">acolhedor, poético, sem pressa</em> — <em class="q">"não há pressa, não há certo ou errado, há apenas você e sua verdade."</em> O arquivo de bios, escrito pela própria Lucia, define a regra oposta para o corporativo:</p>
+
+  <div class="quote">Nunca mencione autoconhecimento, espiritualidade ou desenvolvimento interior no contexto corporativo. Esses são os bastidores do seu método — não o produto.
+    <span>— bios_linkedin_apresentacao.html, Guia de Tom de Voz, regra 5</span></div>
+
+  <p>As duas coisas estão certas, em camadas diferentes. A paleta e as fontes são as mesmas; o que muda é o vocabulário e a densidade. A tabela de tradução completa está na skill <strong>lucia-oliveira-linkedin</strong>, seção 9 — e ela precisa ser rodada em todo texto antes de publicar, com busca literal por "autoconhecimento", "propósito", "essência" e "jornada interior".</p>
+
+  <div class="box azul">
+    <div class="box-lbl">Ponto de atenção nomeado agora, resolvido no Encontro 3</div>
+    <p>A <strong>Etapa 1 da jornada de 4 etapas chama-se literalmente "Autoconhecimento"</strong>. O conteúdo dela é excelente e não muda. O nome, em material comercial e em post, passa a ser <strong>"Diagnóstico de Estilo de Liderança"</strong>. É o nome que decide se a diretoria aprova o orçamento.</p>
+  </div>
+</div>
+
+<!-- ══════════ 02 ══════════ -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-num">SEÇÃO 02</div>
+    <div class="sec-title">Posicionamento, ICP e as <em>8 dores</em></div>
+    <div class="sec-rule"></div>
+  </div>
+
+  <h3>O alfinete no mapa</h3>
+  <p>O próprio <strong>Briefing_publico Linkedin</strong> ofereceu seis opções de território. A escolhida é a que ele mesmo apontou como a de maior potencial de virar marca:</p>
+
+  <div class="quote">Eu trabalho onde o resultado da empresa encontra o comportamento do líder.
+    <span>— Território de marca</span></div>
+
+  <p>E a tese que atravessa todo post, essa vinda da história dela:</p>
+
+  <div class="quote">Resultado obtido pelo medo tem prazo de validade.
+    <span>— Tese central</span></div>
+
+  <div class="box">
+    <div class="box-lbl">Por que essa tese é proprietária</div>
+    <p>Porque é literalmente a biografia dela. A Lucia <strong>foi</strong> a diretora que entregava número e cujo time tinha medo — e descobriu isso pela boca de uma gestora do próprio time, alguém de quem era próxima. A dor não foi ouvir. Foi descobrir que <strong>não sabia como fazer diferente</strong>: aquele era o único modo de liderar que ela conhecia, e tinha funcionado até ali.</p>
+    <p style="margin-top:10px">Ninguém copia isso. É o ativo mais valioso do perfil e hoje ele está fora do material comercial.</p>
+  </div>
+
+  <h4>Variações por interlocutor</h4>
+  <ul>
+    <li><strong>Para RH:</strong> "Ajudo empresas a transformar gestores tecnicamente bons em líderes de verdade."</li>
+    <li><strong>Para diretoria:</strong> "Desenvolvo líderes que entregam resultado sem destruir seus times."</li>
+    <li><strong>Premium:</strong> "Desenvolvo líderes emocionalmente preparados para sustentar alta performance."</li>
+  </ul>
+
+  <h3>ICP em três níveis</h3>
+  <div class="g3">
+    <div class="card"><div class="card-lbl">QUEM COMPRA</div><div class="card-t">Orçamento</div>
+      <p>Diretor Executivo · CEO · Diretor de RH · Head de RH · Head de People · Diretor de DHO · HRBP em empresas maiores.</p></div>
+    <div class="card azul"><div class="card-lbl">QUEM INFLUENCIA</div><div class="card-t">Pauta</div>
+      <p>RH · DHO · People &amp; Culture · Talent Management · Learning &amp; Development · HRBP.</p></div>
+    <div class="card vinho"><div class="card-lbl">QUEM RECEBE</div><div class="card-t">Transformação</div>
+      <p>Coordenadores · gerentes · heads · líderes de primeira e segunda gestão · executivos.</p></div>
+  </div>
+  <p><strong>Setores prioritários:</strong> mercado financeiro e serviços — onde a pressão por resultado e a carga emocional são mais altas, e de onde a Lucia veio. <strong>Porte:</strong> médias e grandes, com camada de liderança formada por promoção interna.</p>
+
+  <h3>As 8 dores — a fonte de toda pauta</h3>
+  <p>Extraídas do <strong>Mapeamento_estrategia_CORP</strong> e do <strong>Briefing_publico Linkedin</strong>. Cada uma tem uma isca própria, e cada post do calendário nasce de uma delas.</p>
+
+  <div class="tw"><table>
+    <thead><tr><th class="num">#</th><th style="width:23%">Dor</th><th>O que ela é de verdade</th><th style="width:12%">Isca</th></tr></thead>
+    <tbody>
+      <tr><td class="num">1</td><td><strong>Promoção técnica virou problema de gestão</strong></td><td>Promoveu o melhor especialista e não preparou ninguém pra liderar gente. O líder diz "é bom tecnicamente mas não sabe liderar"; o RH vê uma promoção correta que gerou um problema.</td><td class="kw">DEGRAU</td></tr>
+      <tr><td class="num">2</td><td><strong>Entrega número, ninguém quer trabalhar com ele</strong></td><td>A dor mais forte do mapa. O indicador protege o gestor, então ninguém confronta — até o time sangrar. É a história da Lucia, e a autoridade que ninguém copia.</td><td class="kw">CUSTO</td></tr>
+      <tr><td class="num">3</td><td><strong>Treinamento que não muda comportamento</strong></td><td>"O RH oferece treinamento e o comportamento não muda depois." É também a objeção oculta nº1 da venda: <em class="q">"como sei que isso não vai ser só mais um treinamento motivacional?"</em></td><td class="kw">DEPOIS</td></tr>
+      <tr><td class="num">4</td><td><strong>Dependência de pessoas-chave</strong></td><td><em class="q">"Se três pessoas saírem amanhã, o que acontece com a empresa?"</em> Líderes que não formam líderes. Admitir isso é admitir falha própria — por isso ninguém fala.</td><td class="kw">RISCO</td></tr>
+      <tr><td class="num">5</td><td><strong>Time que não anda sem o gestor</strong></td><td>"Se eu não fizer, ninguém faz direito." Líder sobrecarregado e time dependente são o mesmo problema visto de dois ângulos.</td><td class="kw">AUTONOMIA</td></tr>
+      <tr><td class="num">6</td><td><strong>Turnover que aparece tarde no relatório</strong></td><td>"O problema aparece meses depois no turnover." O RH vê o acidente em câmera lenta e não consegue convencer quem decide.</td><td class="kw">SINAIS</td></tr>
+      <tr><td class="num">7</td><td><strong>Estratégia que não vira execução</strong></td><td><em class="q">"Será que o problema é a estratégia ou as pessoas que deveriam executá-la?"</em> A estratégia morre nos comportamentos do dia a dia.</td><td class="kw">PONTE</td></tr>
+      <tr><td class="num">8</td><td><strong>RH tratado como custo</strong></td><td>Duas feridas do próprio comprador: <em class="q">"e se tudo que eu construo for visto como despesa?"</em> e <em class="q">"eu cuido de todos, mas quem cuida de mim?"</em>. A que mais gera DM, porque ninguém escreve sobre ela.</td><td class="kw">CONVERSA</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="box dark">
+    <div class="box-lbl">O teste que reprova post antes de publicar</div>
+    <p>Se o post soa como alguém <strong>comentando de fora</strong> o problema dos líderes, está errado de origem. Reescreve em primeira pessoa, de dentro da cadeira que ela ocupou. É esse ângulo — <em>eu estive do outro lado da mesa</em> — que separa a Lucia de qualquer outro perfil de liderança no LinkedIn.</p>
+  </div>
+</div>
+
+<!-- ══════════ 03 ══════════ -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-num">SEÇÃO 03</div>
+    <div class="sec-title">Análise do modelo de negócio e da <em>oferta</em></div>
+    <div class="sec-rule"></div>
+    <div class="sec-lead">Rodada com as três lentes da skill <strong>oferta-funil</strong>: Eugene Schwartz (mensagem e nível de consciência) → Alex Hormozi (oferta e precificação) → Russell Brunson (funil e quebra de objeção). São nove achados, do mais caro ao menos caro.</div>
+  </div>
+
+  <h3>Lente 1 · Schwartz — mensagem e nível de consciência</h3>
+
+  <div class="box alerta">
+    <div class="box-lbl">Achado 1 — o mecanismo mais forte não tem nome</div>
+    <p>O <strong>mapa estratégico</strong> classifica o público como <em class="q">consciente do problema</em> e <em class="q">consciente da solução, mas frustrado por não ter obtido resultado sustentável</em>. Público frustrado com a solução não compra mais benefício — compra <strong>mecanismo único e nomeado</strong>.</p>
+    <p style="margin-top:10px">A Lucia tem o mecanismo: a <strong>jornada de 4 etapas</strong> (Autoconhecimento → Líder do Negócio → Influência e Posicionamento → Liderança de Pessoas). É o ativo mais bem construído de todo o material. E ele <strong>não aparece na proposta comercial, nem na bio, nem na headline</strong>. A proposta vende "Diagnóstico → Plano → Implementação", que é o processo genérico de qualquer consultoria.</p>
+    <p style="margin-top:10px"><strong>Correção:</strong> nomear a jornada, traduzir a Etapa 1 para "Diagnóstico de Estilo de Liderança", e colocá-la no centro da proposta e do perfil.</p>
+  </div>
+
+  <div class="box alerta">
+    <div class="box-lbl">Achado 2 — a promessa e o produto não têm a mesma duração</div>
+    <p>Todos os briefings prometem <strong>"Transformação em 90 dias"</strong>. A proposta comercial vende <strong>5 a 6 meses</strong> no Programa Essencial, 9 meses no Avançado, 12 no Premium.</p>
+    <p style="margin-top:10px">O comprador que leu a promessa de 90 dias e recebe uma proposta de 6 meses lê isso como <strong>preço dobrado sem explicação</strong>. Ou a promessa passa a ser de 6 meses, ou o Essencial passa a caber em 90 dias. Manter os dois números vivos custa venda.</p>
+  </div>
+
+  <div class="box">
+    <div class="box-lbl">Achado 3 — a história dela está fora do material de venda</div>
+    <p>A narrativa de <strong>Minha História</strong> é o ativo de conversão mais forte que existe nessa pasta — e não há uma linha dela na proposta ao Recovery. A proposta se apresenta como "Mentora com 20+ anos e certificações internacionais", que é o que todo concorrente escreve.</p>
+    <p style="margin-top:10px">O que só ela pode dizer: <em class="q">"Eu já estive do outro lado da mesa. Fui a líder que entregava resultado e precisava aprender a gerar resultado através das pessoas."</em></p>
+  </div>
+
+  <h3>Lente 2 · Hormozi — oferta e precificação</h3>
+
+  <div class="box alerta">
+    <div class="box-lbl">Achado 4 — a escada de preço vende sessão, não transformação</div>
+    <div class="tw"><table>
+      <thead><tr><th>Programa</th><th>Duração</th><th>Sessões</th><th>Investimento</th><th>Preço por sessão</th></tr></thead>
+      <tbody>
+        <tr><td>Essencial</td><td>5-6 meses</td><td>10</td><td>R$ 15.000</td><td><strong>R$ 1.500</strong></td></tr>
+        <tr><td>Avançado</td><td>9 meses</td><td>15</td><td>R$ 21.000</td><td><strong>R$ 1.400</strong></td></tr>
+        <tr><td>Premium</td><td>12 meses</td><td>20</td><td>R$ 27.000</td><td><strong>R$ 1.350</strong></td></tr>
+      </tbody>
+    </table></div>
+    <p>A escada sobe por <strong>volume de sessão</strong>, e quanto mais o cliente compra, menos vale a hora dela. Isso ensina o comprador a negociar por hora — exatamente a comparação por preço que o documento de posicionamento diz que ela precisa evitar.</p>
+    <p style="margin-top:10px"><strong>Correção:</strong> a escada deve subir por <strong>escopo de resultado</strong>, não por número de encontros:</p>
+    <ul>
+      <li><strong>Nível 1 — um líder.</strong> O gestor específico que a empresa precisa destravar.</li>
+      <li><strong>Nível 2 — o líder e o time dele.</strong> Inclui a sessão com a equipe (hoje é um bônus perdido no Premium).</li>
+      <li><strong>Nível 3 — a camada de liderança.</strong> Vários líderes, linguagem comum, ritual de gestão instalado. É aqui que mora o contrato grande e a recorrência.</li>
+    </ul>
+  </div>
+
+  <div class="box alerta">
+    <div class="box-lbl">Achado 5 — não existe medição do próprio programa</div>
+    <p>A proposta traz cinco dados globais de ROI (Gallup, ICF, PwC, Torch, Gallup Strengths) e <strong>nenhuma métrica do programa dela</strong>. O comprador é um RH cuja dor nº1 é o medo de ser visto como área de custo. Ele não precisa que o coaching funcione no mundo — precisa provar que <em>este</em> programa funcionou <em>aqui</em>.</p>
+    <p style="margin-top:10px">É também o que responde a objeção oculta que a própria Lucia listou: <em class="q">"como sei que isso não será apenas mais um treinamento motivacional?"</em> Hoje ela é respondida por discurso. Precisa ser respondida por estrutura.</p>
+    <p style="margin-top:10px"><strong>Correção — três marcos, dentro do que ela já entrega:</strong></p>
+    <ul>
+      <li><strong>Baseline no início:</strong> clima ou eNPS da área do líder, turnover dos últimos 12 meses, 3 comportamentos observáveis acordados com o gestor e o RH</li>
+      <li><strong>Meio do processo:</strong> os mesmos 3 comportamentos, avaliados por quem convive — já está previsto como "alinhamento na metade"</li>
+      <li><strong>Fim:</strong> mesma medida do baseline, lado a lado, no relatório final que já existe no escopo</li>
+    </ul>
+    <p style="margin-top:10px">Isso não adiciona trabalho relevante e transforma o relatório final de entregável em <strong>argumento de renovação</strong>.</p>
+  </div>
+
+  <div class="box alerta">
+    <div class="box-lbl">Achado 6 — a garantia sinaliza risco em vez de removê-lo</div>
+    <p>Texto atual: <em class="q">"Se após as primeiras 3 sessões a empresa não estiver satisfeita, devolvemos 70% do investimento sem questionamentos."</em> Três problemas:</p>
+    <ul>
+      <li><strong>70% é um número que pede explicação.</strong> "Sem questionamentos" e "70%" se contradizem na mesma frase — se não há questionamento, por que retém 30%?</li>
+      <li><strong>Quem julga a satisfação?</strong> A mentoria é confidencial com o líder. Depois de 3 sessões, a empresa não tem como avaliar conteúdo — só presença.</li>
+      <li><strong>Garantia baseada em satisfação é fraca.</strong> Garantia baseada em <strong>execução</strong> é forte e está sob controle dela.</li>
+    </ul>
+    <p style="margin-top:10px"><strong>Correção sugerida:</strong> "Se após as 3 primeiras sessões o líder ou a empresa entender que não é o caminho, encerramos e devolvemos integralmente o valor das sessões não realizadas." Custo real menor, percepção de risco muito menor.</p>
+  </div>
+
+  <div class="box alerta">
+    <div class="box-lbl">Achado 7 — vende R$27.000 sem uma única prova</div>
+    <p>O item 8 do mapa estratégico já reconhece a necessidade: <em class="q">"cases corporativos, depoimentos de RHs, depoimentos de líderes, indicadores de satisfação..."</em> A proposta ao Recovery não tem nenhum.</p>
+    <p style="margin-top:10px">Enquanto não houver case de cliente entregue, <strong>a prova disponível é a dela</strong> — e é forte: a área dela entrou para as três primeiras da empresa inteira em clima organizacional, virou celeiro de talentos, o turnover caiu e o engajamento subiu. Nada disso está na proposta.</p>
+    <p style="margin-top:10px"><strong>Ação com prazo:</strong> depoimento em vídeo ou texto do primeiro cliente entregue, com autorização por escrito. Até lá, todo caso vai anonimizado — e o Grupo Recovery <strong>não</strong> pode ser citado como cliente, porque é proposta em aberto.</p>
+  </div>
+
+  <h3>Lente 3 · Brunson — funil e objeção</h3>
+
+  <div class="box alerta">
+    <div class="box-lbl">Achado 8 — o funil salta de conteúdo gratuito para R$15.000</div>
+    <p>Não existe degrau intermediário. O comprador vai de "li um post" para "assine R$15.000 por participante" sem nada no meio que permita experimentar o método com risco baixo.</p>
+    <p style="margin-top:10px">A peça já existe e está enterrada como bônus na proposta: <strong>"diagnóstico prévio da equipe"</strong>. Ela deveria ser um <strong>produto de entrada</strong>:</p>
+    <ul>
+      <li><strong>Diagnóstico de Liderança da Área</strong> — 2 a 3 semanas, entrega um mapa dos comportamentos que estão travando resultado, com baseline medido. Preço de entrada, abatido do programa se a empresa seguir.</li>
+      <li>Ele qualifica, gera o baseline que resolve o Achado 5, e transforma a venda grande em consequência natural em vez de decisão fria.</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <div class="box-lbl">Achado 9 — duas empresas dentro do mesmo perfil</div>
+    <p>Instituto Eleve o Ser vende B2B (mentoria contratada pela empresa, treinamentos, Programa Eleve). Em paralelo, há um plano de produto digital para pessoa física com dores emocionais profundas. São <strong>dois níveis de consciência, dois preços e dois canais</strong>.</p>
+    <p style="margin-top:10px">Tentar servir os dois no mesmo perfil é o que faz a headline atual precisar de cinco separadores para explicar o que ela faz. <strong>A decisão deste plano é: 90 dias de B2B puro.</strong> A frente PF não morre — fica em espera, e volta como oferta separada depois que o B2B tiver pipeline rodando.</p>
+  </div>
+
+  <div class="box ok">
+    <div class="box-lbl">O que está certo e não deve ser mexido</div>
+    <ul>
+      <li><strong>A jornada de 4 etapas</strong> — estrutura de mecanismo melhor que a média do mercado. Só falta nome e destaque.</li>
+      <li><strong>A tradução da abordagem premium</strong> no documento de posicionamento (não fale "team building", fale "confiança que acelera execução") — está pronta e é boa. Só precisa chegar no perfil e nos posts.</li>
+      <li><strong>O mapa de dores invisíveis de RH e diretoria</strong> — é material de conteúdo de altíssimo nível e virou as 8 dores da seção 02.</li>
+      <li><strong>O texto do "Sobre" do LinkedIn</strong> no arquivo de bios — já está no eixo B2B certo. Falta aplicar no perfil.</li>
+      <li><strong>O brandbook</strong> — identidade completa, coerente e com regras claras. Vira a skill de design sem alteração.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ══════════ 04 ══════════ -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-num">SEÇÃO 04</div>
+    <div class="sec-title">Plano de ação — <em>Social Selling Index</em></div>
+    <div class="sec-rule"></div>
+  </div>
+
+  <div class="box alerta">
+    <div class="box-lbl">Pendência bloqueante — Semana 0</div>
+    <p>Ainda não temos o print do SSI da Lucia. Sem baseline, qualquer análise futura vira número solto. <strong>Coletar em <span style="font-family:monospace">linkedin.com/sales/ssi</span> antes do primeiro post</strong> e registrar na skill <strong>lucia-oliveira-ssi-analysis</strong>.</p>
+  </div>
+
+  <div class="tw"><table>
+    <thead><tr><th style="width:24%">Pilar</th><th>O que sobe a nota, no caso dela</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Estabelecer marca profissional</strong></td><td>Aplicar headline e "Sobre" do arquivo de bios (já prontos, só não estão no ar). Corrigir o setor do perfil. Usar a seção Destaque para o livro <em>Mulheres Extraordinárias</em> e para os materiais de isca. Capa com o posicionamento, não com frase motivacional.</td></tr>
+      <tr><td><strong>Encontrar as pessoas certas</strong></td><td>Buscar por cargo comprador — Diretor de RH, Head de People, Head de DHO, HRBP, Diretor Executivo — em empresas médias e grandes de serviços e do financeiro. 15-20 visitas de perfil por dia. <strong>Não</strong> adicionar coordenador e gerente em volume: são beneficiários, não compradores.</td></tr>
+      <tr><td><strong>Interagir oferecendo insights</strong></td><td>Costuma ser o gargalo de quem está começando cadência. 3 posts/semana + 5 comentários/dia com opinião real em posts de RH e diretoria. Comentário genérico não conta.</td></tr>
+      <tr><td><strong>Construir relacionamentos</strong></td><td>Follow-up em até 5 dias depois do aceite, com pergunta sobre a camada de liderança da empresa — nunca com pitch.</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="box azul">
+    <div class="box-lbl">Erro mais comum da carteira — checar agora</div>
+    <p><strong>Setor do perfil errado</strong> apareceu em 4 clientes da Demanda Infinita. Para a Lucia o setor coerente é <strong>Desenvolvimento Profissional / Consultoria de Gestão</strong>. Se estiver como "Coaching e desenvolvimento pessoal", o algoritmo entrega o conteúdo para o público PF — contra o eixo B2B decidido.</p>
+  </div>
+
+  <h4>Projeção — a ser confirmada quando a baseline chegar</h4>
+  <div class="g3">
+    <div class="stat"><div class="stat-n">+6 a +10</div><div class="stat-l">Mês 1<br>perfil aplicado + cadência iniciada</div></div>
+    <div class="stat"><div class="stat-n">+14 a +20</div><div class="stat-l">Mês 2<br>interação diária consolidada</div></div>
+    <div class="stat"><div class="stat-n">+22 a +30</div><div class="stat-l">Mês 3<br>teto realista entre 75 e 80</div></div>
+  </div>
+
+  <div class="box">
+    <div class="box-lbl">Regra de leitura</div>
+    <p><strong>SSI não é meta de negócio, é indicador de processo.</strong> Se o SSI subir e não aparecer reunião, o problema está na oferta ou na isca — não no LinkedIn. Nesse caso a resposta é revisar a Seção 03 deste plano, não postar mais.</p>
+  </div>
+</div>
+
+<!-- ══════════ 05 ══════════ -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-num">SEÇÃO 05</div>
+    <div class="sec-title">Estratégia de funil e os <em>8 lead magnets</em></div>
+    <div class="sec-rule"></div>
+    <div class="sec-lead">Três posts por semana, cada dia com um andar fixo do funil. A proporção 1–1–1 não é negociável, mesmo quando a quarta performar três vezes melhor que os outros dias.</div>
+  </div>
+
+  <div class="g3">
+    <div class="card azul"><div class="card-lbl">QUARTA · TOPO</div><div class="card-t">Atrai</div>
+      <p>Quebra de crença sobre comportamento de liderança, reconhecível por qualquer gestor ou RH. Alcance puro. <strong>Não vende, não tem isca.</strong></p></div>
+    <div class="card"><div class="card-lbl">SEGUNDA · MEIO</div><div class="card-t">Qualifica</div>
+      <p>Dor do ICP + material. <strong>É o único andar que captura lead.</strong> Sai sempre com duas peças: copy + briefing do criativo.</p></div>
+    <div class="card vinho"><div class="card-lbl">SEXTA · FUNDO</div><div class="card-t">Converte</div>
+      <p>O produto: método, bastidor, caso, como ela trabalha, a história dela. <strong>Sem isca.</strong> Uma vez por mês vira oferta direta.</p></div>
+  </div>
+
+  <div class="box dark">
+    <div class="box-lbl">Protocolo de CTA — vale para todo post isca</div>
+    <p><strong>Copy = conteúdo. Criativo = CTA.</strong> Pedido de comentário, conexão ou compartilhamento dentro do texto derruba o alcance. O CTA com a palavra-chave vive <strong>só dentro da imagem</strong>.</p>
+    <p style="margin-top:10px">Prova: A/B do mesmo material feito por terceiro em agosto de 2026 — <strong>84 → 91.573 impressões</strong>, 8 → 2.753 comentários, só movendo o CTA da copy para o criativo. Validado no perfil do Igor em 14/08/2026 e adotado como padrão da casa.</p>
+  </div>
+
+  <h3>Os 8 materiais</h3>
+  <p>Um por dor. <strong>Todas as palavras sem acento na grafia correta</strong> — se levasse acento, a pessoa digitaria com acento e a triagem da DM quebraria.</p>
+
+  <div class="tw"><table>
+    <thead><tr><th style="width:12%">Palavra</th><th>Material entregue na DM</th><th style="width:8%">Dor</th></tr></thead>
+    <tbody>
+      <tr><td class="kw">DEGRAU</td><td><strong>O Degrau</strong> — o que muda no dia 1 quando o especialista vira gestor: 7 decisões que ninguém explica pra quem foi promovido</td><td class="num">1</td></tr>
+      <tr><td class="kw">CUSTO</td><td><strong>O Custo do Medo</strong> — os 11 sinais de que um líder está entregando resultado à custa do time (e o que o indicador não mostra)</td><td class="num">2</td></tr>
+      <tr><td class="kw">DEPOIS</td><td><strong>O Dia Seguinte ao Treinamento</strong> — as 6 travas que fazem o comportamento voltar ao padrão em 30 dias</td><td class="num">3</td></tr>
+      <tr><td class="kw">RISCO</td><td><strong>Mapa de Risco de Liderança</strong> — quem realmente segura a operação e o que acontece se sair</td><td class="num">4</td></tr>
+      <tr><td class="kw">AUTONOMIA</td><td><strong>A Escada da Autonomia</strong> — os 5 degraus entre "eu faço" e "o time decide", e onde cada líder trava</td><td class="num">5</td></tr>
+      <tr><td class="kw">SINAIS</td><td><strong>Antes do Relatório</strong> — 9 sinais de turnover que aparecem meses antes do indicador de RH</td><td class="num">6</td></tr>
+      <tr><td class="kw">PONTE</td><td><strong>A Ponte</strong> — por que a estratégia aprovada não chega no comportamento de segunda-feira</td><td class="num">7</td></tr>
+      <tr><td class="kw">CONVERSA</td><td><strong>A Conversa com a Diretoria</strong> — como o RH defende investimento em liderança em linguagem de negócio</td><td class="num">8</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="box">
+    <div class="box-lbl">As duas iscas que mais importam</div>
+    <p><strong>CUSTO</strong> é a única que fala da dor 2 — o território onde a Lucia tem autoridade que ninguém copia, porque ela foi essa líder.</p>
+    <p style="margin-top:8px"><strong>CONVERSA</strong> é a única endereçada ao problema do <strong>comprador</strong>, não do beneficiário. Quem baixa esse material está com orçamento na mão e precisando de argumento — é a isca com maior taxa de conversa comercial.</p>
+  </div>
+
+  <div class="box alerta">
+    <div class="box-lbl">Duas regras que não se quebram</div>
+    <ul>
+      <li><strong>Diagnóstico, mentoria e reunião não entram na lista de entregáveis da isca.</strong> A oferta vai no parágrafo de fechamento, separada do material gratuito.</li>
+      <li><strong>Nenhuma isca usa "autoconhecimento", "jornada interior", "propósito" ou "essência" no título.</strong> Regra da própria Lucia.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ══════════ 06 ══════════ -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-num">SEÇÃO 06</div>
+    <div class="sec-title">Calendário editorial — <em>36 posts</em> em 90 dias</div>
+    <div class="sec-rule"></div>
+    <div class="sec-lead">12 semanas · 12 posts de meio (com isca) · 12 de topo · 12 de fundo. Cada linha traz o hook pronto para virar post com a skill <strong>lucia-oliveira-linkedin</strong>.</div>
+  </div>
+  <div class="week">
+    <div class="week-h"><span class="week-n">SEMANA 01</span><span class="week-t">Fundação — a promoção que ninguém preparou</span></div>
+    <div class="post">
+      <div class="post-d">SEG</div>
+      <div class="fase meio">MEIO</div>
+      <div class="post-c"><div class="h">A promoção estava certa. A preparação nunca existiu.</div><div class="m">Dor 1 · Quebra de Crença &nbsp;·&nbsp; isca <b>DEGRAU</b></div></div>
+    </div>
+    <div class="post">
+      <div class="post-d">QUA</div>
+      <div class="fase topo">TOPO</div>
+      <div class="post-c"><div class="h">Treinamento não muda comportamento. Rotina muda.</div><div class="m">Dor 3 · Quebra de Crença</div></div>
+    </div>
+    <div class="post">
+      <div class="post-d">SEX</div>
+      <div class="fase fundo">FUNDO</div>
+      <div class="post-c"><div class="h">O que eu pergunto na primeira sessão com um líder — e por que nunca começo pelo resultado dele.</div><div class="m">Autoridade</div></div>
+    </div>
+  </div>
+  <div class="week">
+    <div class="week-h"><span class="week-n">SEMANA 02</span><span class="week-t">O território proprietário — o custo do medo</span></div>
+    <div class="post">
+      <div class="post-d">SEG</div>
+      <div class="fase meio">MEIO</div>
+      <div class="post-c"><div class="h">Ele bate a meta todo trimestre. E é a área com mais pedido de transferência da empresa.</div><div class="m">Dor 2 · Dor &nbsp;·&nbsp; isca <b>CUSTO</b></div></div>
+    </div>
+    <div class="post">
+      <div class="post-d">QUA</div>
+      <div class="fase topo">TOPO</div>
+      <div class="post-c"><div class="h">Resultado obtido pelo medo tem prazo de validade.</div><div class="m">Dor 2 · Quebra de Crença</div></div>
+    </div>
+    <div class="post">
+      <div class="post-d">SEX</div>
+      <div class="fase fundo">FUNDO</div>
+      <div class="post-c"><div class="h">Alguém do meu próprio time me disse que as pessoas tinham medo de mim.</div><div class="m">Autoridade · história</div></div>
+    </div>
+  </div>
+  <div class="week">
+    <div class="week-h"><span class="week-n">SEMANA 03</span><span class="week-t">O que o relatório mostra tarde demais</span></div>
+    <div class="post">
+      <div class="post-d">SEG</div>
+      <div class="fase meio">MEIO</div>
+      <div class="post-c"><div class="h">O turnover já aconteceu meses antes de aparecer no seu relatório.</div><div class="m">Dor 6 · Dor &nbsp;·&nbsp; isca <b>SINAIS</b></div></div>
+    </div>
+    <div class="post">
+      <div class="post-d">QUA</div>
+      <div class="fase topo">TOPO</div>
+      <div class="post-c"><div class="h">A pessoa não pede demissão do cargo. Ela pede demissão do gestor.</div><div class="m">Dor 6 · Quebra de Crença — usar dado Gallup 2024</div></div>
+    </div>
+    <div class="post">
+      <div class="post-d">SEX</div>
+      <div class="fase fundo">FUNDO</div>
+      <div class="post-c"><div class="h">A área que virou celeiro de talentos depois que a líder parou de empurrar.</div><div class="m">Caso de Sucesso — o dela</div></div>
+    </div>
+  </div>
+  <div class="week">
+    <div class="week-h"><span class="week-n">SEMANA 04</span><span class="week-t">A dor do comprador</span></div>
+    <div class="post">
+      <div class="post-d">SEG</div>
+      <div class="fase meio">MEIO</div>
+      <div class="post-c"><div class="h">“E se tudo o que eu estou construindo for visto apenas como despesa?”</div><div class="m">Dor 8 · Dor &nbsp;·&nbsp; isca <b>CONVERSA</b></div></div>
+    </div>
+    <div class="post">
+      <div class="post-d">QUA</div>
+      <div class="fase topo">TOPO</div>
+      <div class="post-c"><div class="h">Bem-estar é benefício. Capacidade de execução é negócio.</div><div class="m">Dor 8 · Quebra de Crença</div></div>
+    </div>
+    <div class="post">
+      <div class="post-d">SEX</div>
+      <div class="fase fundo">FUNDO</div>
+      <div class="post-c"><div class="h">Se a sua empresa promoveu bem e não preparou depois, vale a conversa.</div><div class="m">Oferta direta — fecha o 1º ciclo</div></div>
+    </div>
+  </div>
+  <div class="week">
+    <div class="week-h"><span class="week-n">SEMANA 05</span><span class="week-t">Centralização</span></div>
+    <div class="post">
+      <div class="post-d">SEG</div>
+      <div class="fase meio">MEIO</div>
+      <div class="post-c"><div class="h">“Se eu não fizer, ninguém faz direito.”</div><div class="m">Dor 5 · Dor &nbsp;·&nbsp; isca <b>AUTONOMIA</b></div></div>
+    </div>
+    <div class="post">
+      <div class="post-d">QUA</div>
+      <div class="fase topo">TOPO</div>
+      <div class="post-c"><div class="h">Delegar tarefa não é delegar decisão.</div><div class="m">Dor 5 · Quebra de Crença</div></div>
+    </div>
+    <div class="post">
+      <div class="post-d">SEX</div>
+      <div class="fase fundo">FUNDO</div>
+      <div class="post-c"><div class="h">Os 5 degraus entre “eu faço” e “o time decide”.</div><div class="m">Autoridade · método</div></div>
+    </div>
+  </div>
+  <div class="week">
+    <div class="week-h"><span class="week-n">SEMANA 06</span><span class="week-t">A objeção nº1 da venda, virada em conteúdo</span></div>
+    <div class="post">
+      <div class="post-d">SEG</div>
+      <div class="fase meio">MEIO</div>
+      <div class="post-c"><div class="h">O RH ofereceu o treinamento. O gestor voltou igual.</div><div class="m">Dor 3 · Dor &nbsp;·&nbsp; isca <b>DEPOIS</b></div></div>
+    </div>
+    <div class="post">
+      <div class="post-d">QUA</div>
+      <div class="fase topo">TOPO</div>
+      <div class="post-c"><div class="h">Avaliação de reação não é medida de mudança.</div><div class="m">Dor 3 · Quebra de Crença</div></div>
+    </div>
+    <div class="post">
+      <div class="post-d">SEX</div>
+      <div class="fase fundo">FUNDO</div>
+      <div class="post-c"><div class="h">Como eu meço o que mudou num programa de liderança.</div><div class="m">Autoridade · resolve o Achado 5 da Seção 03</div></div>
+    </div>
+  </div>
+  <div class="week">
+    <div class="week-h"><span class="week-n">SEMANA 07</span><span class="week-t">O que tira o sono da diretoria</span></div>
+    <div class="post">
+      <div class="post-d">SEG</div>
+      <div class="fase meio">MEIO</div>
+      <div class="post-c"><div class="h">Se três pessoas saírem amanhã, o que acontece com a sua empresa?</div><div class="m">Dor 4 · Dor &nbsp;·&nbsp; isca <b>RISCO</b></div></div>
+    </div>
+    <div class="post">
+      <div class="post-d">QUA</div>
+      <div class="fase topo">TOPO</div>
+      <div class="post-c"><div class="h">Sucessão não é uma planilha de nomes. É um comportamento que já está acontecendo.</div><div class="m">Dor 4 · Quebra de Crença</div></div>
+    </div>
+    <div class="post">
+      <div class="post-d">SEX</div>
+      <div class="fase fundo">FUNDO</div>
+      <div class="post-c"><div class="h">Como eu alinho expectativa com RH e gestor sem quebrar a confidencialidade do mentorado.</div><div class="m">Autoridade · quebra objeção de confidencialidade</div></div>
+    </div>
+  </div>
+  <div class="week">
+    <div class="week-h"><span class="week-n">SEMANA 08</span><span class="week-t">Estratégia que não desce</span></div>
+    <div class="post">
+      <div class="post-d">SEG</div>
+      <div class="fase meio">MEIO</div>
+      <div class="post-c"><div class="h">O planejamento foi aprovado em dezembro. Em março ninguém mudou o que faz.</div><div class="m">Dor 7 · Dor &nbsp;·&nbsp; isca <b>PONTE</b></div></div>
+    </div>
+    <div class="post">
+      <div class="post-d">QUA</div>
+      <div class="fase topo">TOPO</div>
+      <div class="post-c"><div class="h">A estratégia não morre na concorrência. Morre nos comportamentos do dia a dia.</div><div class="m">Dor 7 · Quebra de Crença</div></div>
+    </div>
+    <div class="post">
+      <div class="post-d">SEX</div>
+      <div class="fase fundo">FUNDO</div>
+      <div class="post-c"><div class="h">Programa para a camada de liderança: quando um líder só não resolve.</div><div class="m">Oferta direta — fecha o 2º ciclo</div></div>
+    </div>
+  </div>
+  <div class="week">
+    <div class="week-h"><span class="week-n">SEMANA 09</span><span class="week-t">Segunda rodada — o degrau, por outro ângulo</span></div>
+    <div class="post">
+      <div class="post-d">SEG</div>
+      <div class="fase meio">MEIO</div>
+      <div class="post-c"><div class="h">Ninguém explica pro recém-promovido o que ele para de fazer.</div><div class="m">Dor 1 · Dor &nbsp;·&nbsp; isca <b>DEGRAU</b></div></div>
+    </div>
+    <div class="post">
+      <div class="post-d">QUA</div>
+      <div class="fase topo">TOPO</div>
+      <div class="post-c"><div class="h">O melhor especialista da empresa pode ser o pior líder dela.</div><div class="m">Dor 1 · Quebra de Crença</div></div>
+    </div>
+    <div class="post">
+      <div class="post-d">SEX</div>
+      <div class="fase fundo">FUNDO</div>
+      <div class="post-c"><div class="h">Eu virei coordenadora em menos de dois anos. Ninguém me ensinou a liderar.</div><div class="m">Autoridade · história</div></div>
+    </div>
+  </div>
+  <div class="week">
+    <div class="week-h"><span class="week-n">SEMANA 10</span><span class="week-t">Segunda rodada — o indicador que protege</span></div>
+    <div class="post">
+      <div class="post-d">SEG</div>
+      <div class="fase meio">MEIO</div>
+      <div class="post-c"><div class="h">O indicador protege o gestor até o time começar a sair.</div><div class="m">Dor 2 · Dor &nbsp;·&nbsp; isca <b>CUSTO</b></div></div>
+    </div>
+    <div class="post">
+      <div class="post-d">QUA</div>
+      <div class="fase topo">TOPO</div>
+      <div class="post-c"><div class="h">Clima bom não é time sem cobrança.</div><div class="m">Dor 2 · Quebra de Crença</div></div>
+    </div>
+    <div class="post">
+      <div class="post-d">SEX</div>
+      <div class="fase fundo">FUNDO</div>
+      <div class="post-c"><div class="h">Entrei em coaching, modulei comportamento e achei que tinha resolvido.</div><div class="m">Autoridade · história</div></div>
+    </div>
+  </div>
+  <div class="week">
+    <div class="week-h"><span class="week-n">SEMANA 11</span><span class="week-t">Segunda rodada — armando o RH para a reunião de orçamento</span></div>
+    <div class="post">
+      <div class="post-d">SEG</div>
+      <div class="fase meio">MEIO</div>
+      <div class="post-c"><div class="h">O RH fala de cultura. A diretoria pergunta o ROI.</div><div class="m">Dor 8 · Dor &nbsp;·&nbsp; isca <b>CONVERSA</b></div></div>
+    </div>
+    <div class="post">
+      <div class="post-d">QUA</div>
+      <div class="fase topo">TOPO</div>
+      <div class="post-c"><div class="h">O custo invisível das conversas que nunca acontecem.</div><div class="m">Dor 7 · Quebra de Crença</div></div>
+    </div>
+    <div class="post">
+      <div class="post-d">SEX</div>
+      <div class="fase fundo">FUNDO</div>
+      <div class="post-c"><div class="h">O que muda na aprovação quando o RH leva baseline em vez de proposta.</div><div class="m">Autoridade · alimenta o produto de entrada</div></div>
+    </div>
+  </div>
+  <div class="week">
+    <div class="week-h"><span class="week-n">SEMANA 12</span><span class="week-t">Fechamento do ciclo</span></div>
+    <div class="post">
+      <div class="post-d">SEG</div>
+      <div class="fase meio">MEIO</div>
+      <div class="post-c"><div class="h">Os 9 sinais que aparecem antes do pedido de demissão.</div><div class="m">Dor 6 · Autoridade &nbsp;·&nbsp; isca <b>SINAIS</b></div></div>
+    </div>
+    <div class="post">
+      <div class="post-d">QUA</div>
+      <div class="fase topo">TOPO</div>
+      <div class="post-c"><div class="h">Todo mundo mede resultado. Quase ninguém mede os comportamentos que produzem o resultado.</div><div class="m">Dor 7 · Quebra de Crença</div></div>
+    </div>
+    <div class="post">
+      <div class="post-d">SEX</div>
+      <div class="fase fundo">FUNDO</div>
+      <div class="post-c"><div class="h">Diagnóstico de Liderança da Área: por onde a gente começa.</div><div class="m">Oferta direta — produto de entrada</div></div>
+    </div>
+  </div>
+</div>
+<!-- ══════════ 07 ══════════ -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-num">SEÇÃO 07</div>
+    <div class="sec-title">Quatro posts prontos — <em>um de cada tipo</em></div>
+    <div class="sec-rule"></div>
+    <div class="sec-lead">Prontos para copiar e colar. Dois de meio (com isca e briefing de criativo), um de topo e um de fundo. Todos passaram pelo checklist de captura: nenhuma ocorrência de "comenta", "conecta" ou "compartilha" na copy, um único hint com 👇 na abertura, e o CTA com a palavra-chave vivendo só dentro da imagem.</div>
+  </div>
+  <div class="pp">
+    <div class="pp-h"><div class="l">SEMANA 01 · SEGUNDA · MEIO</div><div class="t">Post isca — DEGRAU</div></div>
+    <div class="pp-meta"><span class="pp-tag">DOR 1</span><span class="pp-tag">QUEBRA DE CRENÇA</span><span class="pp-tag">ISCA: DEGRAU</span><span class="pp-tag">COPY + CRIATIVO</span></div>
+    <div class="pp-body">A promoção estava certa. A preparação nunca existiu.
+
+Estou liberando o material completo de graça 👇
+
+Ele era o melhor técnico da área. Resolvia o que ninguém resolvia.
+Em janeiro virou gestor.
+Em julho, três pessoas do time dele pediram transferência.
+
+E aí alguém pergunta se a promoção foi um erro.
+
+Não foi.
+
+O erro foi achar que quem sabe fazer sabe conduzir quem faz.
+
+A maioria das empresas que me procura tem:
+→ gestor promovido pela competência técnica, sem nenhuma referência de como se lidera
+→ o próprio gestor sem saber o que ele precisa parar de fazer agora
+→ RH descobrindo o problema pelo pedido de transferência, não pela avaliação
+
+Você lembra de alguém ter explicado isso pro seu último promovido?
+
+O que muda quando esse líder é preparado antes:
+— ele para de competir com o próprio time na entrega técnica
+— o time para de esperar que ele resolva tudo
+— a primeira conversa difícil acontece na semana 2, não no mês 8
+— e quem aprova orçamento vê o efeito no indicador da área, não num relatório de satisfação
+
+70% da variância em engajamento de um time é determinada pelo gestor direto.
+(Gallup, State of the Global Workplace, 2024)
+
+Setenta por cento. Numa pessoa que ninguém preparou.
+
+— Sem palestra motivacional que dura duas semanas
+— Sem tirar o líder da operação por três dias
+— Sem diagnóstico que vira PDF e morre na gaveta
+
+A PROMOÇÃO FOI CORRETA. A PREPARAÇÃO NÃO EXISTIU.
+
+No material vão as 7 decisões do primeiro mês que ninguém explica:
+→ o que fazer com o colega que virou liderado
+→ o que fazer com a entrega que ele ainda faz melhor que todo mundo
+→ como funciona a primeira cobrança
+→ o que ele precisa parar de fazer, e não só o que passa a fazer
+
+Dá pra rodar em cima da camada de liderança que vocês já têm hoje.
+
+Eu trabalho onde o resultado da empresa encontra o comportamento do líder.
+
+PS.: funciona pra empresa que promoveu bem e não preparou depois.</div>
+    <div class="pp-cri"><div class="l">BRIEFING DO CRIATIVO</div><p><strong>Formato 3 — tabela de duas colunas.</strong> Fundo tinta-uva #1A1218, cabeçalhos em Cinzel caixa alta latão #9C8252, divisor vertical em latão translúcido. Coluna esquerda <strong>O QUE A EMPRESA VIU</strong>: "promovemos o melhor técnico". Coluna direita <strong>O QUE ELE RECEBEU</strong>: "o cargo, o time e nenhuma referência". Formato 1080×1350.<br><br>Nada de capa de e-book, nada de seta apontando pra título. O teste é: o head de RH pararia pra ler essa tabela mesmo que não existisse material atrás?</p><div class="faixa">Comente DEGRAU e eu envio o material — quem responde a DM sou eu.</div></div>
+  </div>
+  <div class="pp">
+    <div class="pp-h"><div class="l">SEMANA 01 · SEXTA · FUNDO</div><div class="t">Post de autoridade — o método por dentro</div></div>
+    <div class="pp-meta"><span class="pp-tag">AUTORIDADE</span><span class="pp-tag">SEM ISCA</span><span class="pp-tag">CONVERTE</span></div>
+    <div class="pp-body">O que eu pergunto na primeira sessão com um líder — e por que nunca começo pelo resultado dele.
+
+Todo mundo espera que eu abra pela meta.
+
+Eu abro por outra coisa: me conta uma situação recente em que você saiu de uma conversa com o time e ficou com um incômodo que não soube nomear.
+
+Quase sempre a pessoa demora pra responder.
+
+Não é porque não tem exemplo. É porque ninguém nunca perguntou.
+
+Depois disso, três perguntas:
+— o que você faz quando o time não entrega no seu padrão?
+— quem na sua área toma decisão sem te consultar?
+— qual conversa você está adiando há mais de um mês?
+
+A primeira mostra o comportamento sob pressão, que é onde o estilo real aparece.
+A segunda mede autonomia com fato, não com percepção.
+A terceira quase sempre é onde o problema mora.
+
+Nenhuma delas fala de meta. E as três explicam a meta.
+
+Porque comportamento não muda por conselho. Muda quando a pessoa consegue ver o próprio padrão funcionando na frente dela.
+
+Depois disso eu alinho com o gestor e com o RH o que vai ser acompanhado: três comportamentos observáveis, medidos no início, no meio e no fim. O conteúdo da sessão é confidencial. A evolução, não.
+
+É isso que separa um processo de desenvolvimento de uma conversa boa.
+
+Qual dessas três perguntas você não gostaria de responder hoje?</div>
+    <div class="pp-cri"><div class="l">BRIEFING DO CRIATIVO</div><p><strong>Formato 5 — foto real dela</strong> em contexto de mesa ou sessão, overlay tinta-uva a 70%, frase por cima em Philosopher mármore #E8E2D5: <em>"Todo mundo espera que eu abra pela meta."</em><br><br>Nada de foto de palestra com microfone, nada de imagem de banco. <strong>Post de fundo não leva faixa de CTA</strong> — o objetivo aqui é dwell time e credibilidade, não captura.</p></div>
+  </div>
+  <div class="pp">
+    <div class="pp-h"><div class="l">SEMANA 02 · QUARTA · TOPO</div><div class="t">Quebra de crença — a tese central</div></div>
+    <div class="pp-meta"><span class="pp-tag">DOR 2</span><span class="pp-tag">QUEBRA DE CRENÇA</span><span class="pp-tag">SEM ISCA</span><span class="pp-tag">ALCANCE</span></div>
+    <div class="pp-body">Resultado obtido pelo medo tem prazo de validade.
+
+Eu sei porque fui essa líder.
+
+Meus números eram inquestionáveis. Times grandes, clientes críticos, entrega consistente em qualquer lugar que eu passasse.
+
+Meu gestor foi o primeiro a dizer que a forma como eu conduzia as coisas não ajudava a construir. Entrei em coaching. Modulei comportamento. Achei que estava resolvendo.
+
+Até uma gestora do meu próprio time — alguém de quem eu era próxima e em quem eu confiava — me dizer que o time tinha medo de mim.
+
+Que eu nunca estava errada.
+Mas que as pessoas temiam a forma como eu chegava.
+
+O que dói nessa frase não é ouvir.
+
+É perceber que o indicador nunca te avisa.
+
+Enquanto a meta bate, ninguém confronta o gestor. O número vira blindagem. E a conta chega depois: no pedido de transferência, na sucessão que não existe, no talento que saiu e ninguém entendeu direito por quê.
+
+Medo entrega no trimestre.
+Não entrega no ciclo seguinte.
+
+E o mais difícil não foi admitir. Foi descobrir que eu não sabia fazer diferente — aquele era o único jeito de liderar que eu conhecia, e era o que tinha me trazido até ali.
+
+Ninguém me ensinou outro caminho. E sozinha, eu não conseguia enxergar qual era.
+
+Quantos gestores na sua empresa estão protegidos pelo próprio resultado?</div>
+    <div class="pp-cri"><div class="l">BRIEFING DO CRIATIVO</div><p><strong>Formato 2 — recorte de conversa.</strong> Balão de mensagem em mármore suave #F4EFE6 sobre fundo tinta-uva, com a frase <em>"o time tem medo de você"</em> em Montserrat, sem nenhuma identificação. Abaixo, em Cinzel latão caixa alta: <strong>RESULTADO OBTIDO PELO MEDO TEM PRAZO DE VALIDADE.</strong><br><br><strong>Sem faixa de CTA</strong> — post de topo não captura. Este é o criativo com maior chance de salvamento e compartilhamento do trimestre: vale investir tempo nele.</p></div>
+  </div>
+  <div class="pp">
+    <div class="pp-h"><div class="l">SEMANA 04 · SEGUNDA · MEIO</div><div class="t">Post isca — CONVERSA (a dor do comprador)</div></div>
+    <div class="pp-meta"><span class="pp-tag">DOR 8</span><span class="pp-tag">DOR</span><span class="pp-tag">ISCA: CONVERSA</span><span class="pp-tag">COPY + CRIATIVO</span></div>
+    <div class="pp-body">&quot;E se tudo o que eu estou construindo for visto apenas como despesa?&quot;
+
+Estou liberando o material completo de graça 👇
+
+Essa é a frase que eu mais ouço de RH. E nunca numa reunião — sempre depois, quando a sala esvazia.
+
+O RH fala de cultura.
+A diretoria pergunta o ROI.
+
+E aí a iniciativa boa morre. Não por falta de mérito. Por falta de tradução.
+
+O que eu vejo acontecer na prática:
+→ a área identifica o problema de liderança meses antes de qualquer indicador mostrar
+→ leva a proposta e não consegue defender em linguagem de negócio
+→ o orçamento vai pra outra prioridade, e o turnover aparece dois trimestres depois
+
+Você já viu o acidente acontecer em câmera lenta e não conseguiu convencer quem decide?
+
+O que muda quando a conversa é montada de outro jeito:
+— sai de &quot;engajamento e clima&quot; e entra em retenção, execução e risco de sucessão
+— leva baseline, não intenção: o que está medido hoje e o que se espera mover
+— define comportamento observável, que é o que a diretoria consegue verificar
+— e transforma o relatório final em argumento de renovação, não em prestação de contas
+
+86% das empresas que investem em coaching reportam ROI positivo, com retorno mínimo de 100% do investimento.
+(ICF Global Coaching Study, 2024)
+
+O dado existe. O que costuma faltar é quem traduza ele pra dentro da sua empresa.
+
+— Sem prometer número que não dá pra medir
+— Sem transformar desenvolvimento em benefício
+— Sem apresentação de 40 slides pra pedir o que cabe em uma página
+
+O RH NÃO PRECISA DE MAIS ARGUMENTO. PRECISA DE OUTRA LINGUAGEM.
+
+No material vão:
+→ a estrutura de uma página pra levar à diretoria
+→ como montar o baseline com o que a empresa já mede hoje
+→ as 4 perguntas que a diretoria vai fazer, e a resposta de cada uma
+→ o que tirar da proposta pra ela parar de parecer custo
+
+Dá pra montar em cima dos indicadores que vocês já têm.
+
+Eu trabalho onde o resultado da empresa encontra o comportamento do líder.
+
+PS.: e sim, a pergunta &quot;quem cuida de quem cuida&quot; também vale pra você.</div>
+    <div class="pp-cri"><div class="l">BRIEFING DO CRIATIVO</div><p><strong>Formato 1 — frase manuscrita.</strong> Fundo tinta-uva, a frase <em>"quem cuida de quem cuida?"</em> em Great Vibes ampliada, latão claro #C4A96A, ocupando o centro. Acima, em Cinzel caixa alta latão com letter-spacing 4px: <strong>INSTITUTO ELEVE O SER</strong>. Parece anotação, não template — é exatamente o que o teste de dwell time pede.<br><br>Faixa de CTA no rodapé, fundo latão #9C8252 com texto tinta-uva:</p><div class="faixa">Comente CONVERSA e eu envio o material — quem responde a DM sou eu.</div></div>
+  </div>
+  <div class="box alerta">
+    <div class="box-lbl">Checklist antes de publicar qualquer post de captura</div>
+    <ul>
+      <li>A copy não contém "comenta", "comente", "conecta", "curte", "compartilha"? — busca literal</li>
+      <li>Tem exatamente 1 hint leve, na abertura, com 👇?</li>
+      <li>O CTA explícito com a palavra-chave está <strong>no criativo</strong>?</li>
+      <li>O criativo passa no teste do "eu pararia mesmo sem material atrás"?</li>
+      <li>O corpo entrega valor sozinho — quem só ler o post já sai com algo?</li>
+      <li>Link externo fora do corpo do post?</li>
+      <li>Rodou a tradução de vocabulário — zero ocorrência de "autoconhecimento", "propósito", "essência", "jornada interior"?</li>
+      <li>No máximo 1 dado, com fonte, e nunca na abertura?</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ══════════ 08 ══════════ -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-num">SEÇÃO 08</div>
+    <div class="sec-title">Semana 0 — <em>antes do primeiro post</em></div>
+    <div class="sec-rule"></div>
+    <div class="sec-lead">Nada disso é opcional. O gargalo que mais atrasa entrega na carteira da Demanda Infinita é material que o cliente não envia — apareceu em todos os clientes até hoje. Esta lista existe pra esse atraso não acontecer aqui.</div>
+  </div>
+
+  <div class="chk">
+    <div class="chk-i"><div class="chk-b"></div><div class="chk-c"><div class="t">Print do SSI</div><div class="d">Em linkedin.com/sales/ssi — tela completa, com os 4 pilares separados e os dois percentis. É a baseline de tudo e hoje é a pendência bloqueante.</div></div><div class="chk-w">LUCIA</div></div>
+    <div class="chk-i"><div class="chk-b"></div><div class="chk-c"><div class="t">Corrigir o setor do perfil</div><div class="d">Para "Desenvolvimento Profissional / Consultoria de Gestão". Se estiver como coaching pessoal, o algoritmo entrega para o público PF — contra o eixo B2B decidido.</div></div><div class="chk-w">LUCIA</div></div>
+    <div class="chk-i"><div class="chk-b"></div><div class="chk-c"><div class="t">Aplicar headline e "Sobre"</div><div class="d">Os textos já existem prontos no arquivo bios_linkedin_apresentacao e estão no eixo certo — só não estão no ar. Usar a Versão 1 da headline (resultado primeiro), que é a mais vendável para RH que já sabe o que quer.</div></div><div class="chk-w">LUCIA</div></div>
+    <div class="chk-i"><div class="chk-b"></div><div class="chk-c"><div class="t">Foto de capa nova</div><div class="d">Com o posicionamento — "Eu trabalho onde o resultado da empresa encontra o comportamento do líder" — na identidade do brandbook. Nunca frase motivacional.</div></div><div class="chk-w">IGOR</div></div>
+    <div class="chk-i"><div class="chk-b"></div><div class="chk-c"><div class="t">Seção Destaque do perfil</div><div class="d">Livro <em>Mulheres Extraordinárias</em> (Editora Anjo) + os dois primeiros materiais de isca assim que forem publicados.</div></div><div class="chk-w">LUCIA</div></div>
+    <div class="chk-i"><div class="chk-b"></div><div class="chk-c"><div class="t">Link de agendamento</div><div class="d">Cal.com ou equivalente, com 45 min, para o CTA final de todos os materiais. Ainda não existe.</div></div><div class="chk-w">LUCIA + IGOR</div></div>
+    <div class="chk-i"><div class="chk-b"></div><div class="chk-c"><div class="t">Materiais DEGRAU e CONVERSA</div><div class="d">As duas primeiras iscas em HTML, na identidade do Instituto. São as que abrem as semanas 1 e 4.</div></div><div class="chk-w">IGOR</div></div>
+    <div class="chk-i"><div class="chk-b"></div><div class="chk-c"><div class="t">Decidir o nome da jornada de 4 etapas</div><div class="d">Achado 1 da Seção 03. Sem nome, o mecanismo não existe comercialmente. Decisão da Lucia, fechada no Encontro 3.</div></div><div class="chk-w">LUCIA</div></div>
+    <div class="chk-i"><div class="chk-b"></div><div class="chk-c"><div class="t">Autorização de case</div><div class="d">Do primeiro cliente entregue, por escrito. Até existir, todo caso vai anonimizado — e o Grupo Recovery <strong>não</strong> pode ser citado como cliente, porque é proposta em aberto.</div></div><div class="chk-w">LUCIA</div></div>
+  </div>
+</div>
+
+<!-- ══════════ 09 ══════════ -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-num">SEÇÃO 09</div>
+    <div class="sec-title">Os <em>12 encontros</em></div>
+    <div class="sec-rule"></div>
+    <div class="sec-lead">Kickoff + 12 encontros semanais em 90 dias — o roteiro padrão da Demanda Infinita, adaptado ao que os documentos da Lucia mostraram. Cada encontro tem um entregável que sai da sala pronto.</div>
+  </div>
+
+  <div class="enc"><div class="enc-n">0<small>KICKOFF</small></div><div>
+    <div class="enc-t">Onboarding</div>
+    <div class="enc-p">Apresentação do plano, alinhamento de expectativa e coleta do que está pendente na Semana 0. Aqui a Lucia valida — ou contesta — a decisão de eixo B2B da Seção 01. É a única decisão que, se mudar, muda tudo depois.</div>
+    <div class="enc-e"><b>SAI DA SALA</b>Semana 0 preenchida com responsável e data em cada item · eixo confirmado</div>
+  </div></div>
+
+  <div class="enc"><div class="enc-n">1<small>SEMANA 1</small></div><div>
+    <div class="enc-t">Plano de Ação</div>
+    <div class="enc-p">Leitura conjunta deste documento, ajuste do calendário ao que ela consegue sustentar de verdade, e definição do dia e horário fixos de publicação. Começa a contagem dos 90 dias.</div>
+    <div class="enc-e"><b>SAI DA SALA</b>Calendário das 12 semanas aprovado · primeiro post publicado na segunda seguinte</div>
+  </div></div>
+
+  <div class="enc"><div class="enc-n">2<small>SEMANA 2</small></div><div>
+    <div class="enc-t">Posicionamento Magnético</div>
+    <div class="enc-p">Perfil no ar: headline, "Sobre", capa, destaque e setor. Análise da baseline de SSI e definição das duas ações prioritárias do mês. Aqui também se fecha o vocabulário — a tabela de tradução vira regra de casa.</div>
+    <div class="enc-e"><b>SAI DA SALA</b>Perfil publicado · baseline de SSI registrada · tabela de tradução acordada</div>
+  </div></div>
+
+  <div class="enc"><div class="enc-n">3<small>SEMANA 3</small></div><div>
+    <div class="enc-t">Fundação, ICP e Oferta — parte 1</div>
+    <div class="enc-p">Apresentação dos 9 achados da Seção 03. Decisões desta sessão: nome da jornada de 4 etapas, tradução da Etapa 1 para "Diagnóstico de Estilo de Liderança", e alinhamento da promessa de 90 dias com a duração real do programa.</div>
+    <div class="enc-e"><b>SAI DA SALA</b>Mecanismo nomeado · promessa e duração reconciliadas</div>
+  </div></div>
+
+  <div class="enc"><div class="enc-n">4<small>SEMANA 4</small></div><div>
+    <div class="enc-t">Oferta — parte 2: a escada reconstruída</div>
+    <div class="enc-p">Reconstrução da escada de preço por escopo de resultado em vez de volume de sessão (Achado 4). Desenho do produto de entrada — Diagnóstico de Liderança da Área (Achado 8). Nova redação da garantia (Achado 6) e definição dos três marcos de medição (Achado 5).</div>
+    <div class="enc-e"><b>SAI DA SALA</b>Três níveis de oferta definidos · produto de entrada precificado · garantia reescrita · marcos de medição acordados</div>
+  </div></div>
+
+  <div class="enc"><div class="enc-n">5<small>SEMANA 5</small></div><div>
+    <div class="enc-t">Claude Skills + Máquina de Conteúdo</div>
+    <div class="enc-p">Entrega e treinamento das 5 skills construídas para ela. A Lucia aprende a acionar cada uma: escrever post, gerar ideia por isca, buscar gancho de atualidade, analisar SSI e produzir material visual na identidade do Instituto.</div>
+    <div class="enc-e"><b>SAI DA SALA</b>As 5 skills instaladas e rodadas ao vivo · um post escrito por ela na sessão</div>
+  </div></div>
+
+  <div class="enc"><div class="enc-n">6<small>SEMANA 6</small></div><div>
+    <div class="enc-t">Lead Magnets e Materiais</div>
+    <div class="enc-p">Produção das iscas restantes na identidade do brandbook, e definição do padrão de criativo — os 5 formatos que passam no teste de dwell time. Revisão dos primeiros números de alcance das semanas 1 a 5.</div>
+    <div class="enc-e"><b>SAI DA SALA</b>4 materiais publicados · padrão de criativo fechado</div>
+  </div></div>
+
+  <div class="enc"><div class="enc-n">7<small>SEMANA 7</small></div><div>
+    <div class="enc-t">Funil de Vendas Demanda Infinita</div>
+    <div class="enc-p">Montagem do caminho completo: post → comentário com a palavra-chave → DM → material → formulário de qualificação → reunião. Definição das perguntas de qualificação que separam RH curioso de RH com orçamento.</div>
+    <div class="enc-e"><b>SAI DA SALA</b>Funil desenhado ponta a ponta · formulário de qualificação no ar</div>
+  </div></div>
+
+  <div class="enc"><div class="enc-n">8<small>SEMANA 8</small></div><div>
+    <div class="enc-t">Automação e Integração</div>
+    <div class="enc-p">Notificação de lead novo, entrada no CRM e painel de acompanhamento. O objetivo é que nenhum comentário com palavra-chave fique sem resposta — a DM é o gargalo mais caro desse funil.</div>
+    <div class="enc-e"><b>SAI DA SALA</b>Automação rodando · primeiro lead percorrendo o fluxo inteiro</div>
+  </div></div>
+
+  <div class="enc"><div class="enc-n">9<small>SEMANA 9</small></div><div>
+    <div class="enc-t">Processo Comercial</div>
+    <div class="enc-p">Script da reunião com RH e com diretoria — são conversas diferentes. Estrutura de follow-up e as 8 objeções do mapa estratégico dela, com resposta pronta para cada uma. Atenção especial à objeção oculta: "como sei que isso não vai ser só mais um treinamento motivacional?".</div>
+    <div class="enc-e"><b>SAI DA SALA</b>Script de reunião · 8 objeções respondidas · cadência de follow-up definida</div>
+  </div></div>
+
+  <div class="enc"><div class="enc-n">10<small>SEMANA 10</small></div><div>
+    <div class="enc-t">Social Selling e Prospecção Ativa</div>
+    <div class="enc-p">O conteúdo puxa; a prospecção acelera. Busca filtrada por cargo comprador, rotina diária de visitas e comentários, e o roteiro de follow-up de 5 dias após o aceite — sem pitch.</div>
+    <div class="enc-e"><b>SAI DA SALA</b>Lista de 100 perfis do ICP comprador · rotina diária instalada</div>
+  </div></div>
+
+  <div class="enc"><div class="enc-n">11<small>SEMANA 11</small></div><div>
+    <div class="enc-t">Lapidação</div>
+    <div class="enc-p">O que performou e o que não performou nas 10 semanas. Ajuste de hook, de horário, de formato de criativo e de mix entre os três andares. As iscas que não geraram DM saem de circulação; as que geraram ganham uma segunda rodada.</div>
+    <div class="enc-e"><b>SAI DA SALA</b>Calendário do próximo trimestre ajustado com base em número, não em opinião</div>
+  </div></div>
+
+  <div class="enc"><div class="enc-n">12<small>SEMANA 12</small></div><div>
+    <div class="enc-t">Análise e Plano de Continuidade</div>
+    <div class="enc-p">Fecha os 90 dias: SSI comparado com a baseline, leads gerados, reuniões realizadas, propostas enviadas e contratos assinados. Definição do que a Lucia sustenta sozinha e do que continua com apoio.</div>
+    <div class="enc-e"><b>SAI DA SALA</b>Relatório dos 90 dias · plano do próximo trimestre</div>
+  </div></div>
+
+  <div class="box azul" style="margin-top:28px">
+    <div class="box-lbl">Ritual entre os encontros</div>
+    <p><strong>3 posts por semana</strong> (segunda, quarta, sexta) · <strong>5 comentários por dia</strong> com opinião real em posts de RH e diretoria · <strong>15 a 20 visitas de perfil por dia</strong> do ICP comprador · <strong>DM respondida no mesmo dia</strong>. Sem isso, os encontros viram reunião de alinhamento sobre trabalho que não aconteceu.</p>
+  </div>
+</div>
+
+<!-- ══════════ 10 ══════════ -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-num">SEÇÃO 10</div>
+    <div class="sec-title">Metas e <em>medição</em></div>
+    <div class="sec-rule"></div>
+  </div>
+
+  <div class="tw"><table>
+    <thead><tr><th style="width:30%">Indicador</th><th>Mês 1</th><th>Mês 2</th><th>Mês 3</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Posts publicados</strong></td><td>12</td><td>24 acumulados</td><td>36 acumulados</td></tr>
+      <tr><td><strong>SSI</strong></td><td>+6 a +10 sobre a baseline</td><td>+14 a +20</td><td>+22 a +30 (teto realista 75-80)</td></tr>
+      <tr><td><strong>Comentários com palavra-chave</strong></td><td>estabelecer a linha de base</td><td>crescimento sobre o mês 1</td><td>volume sustentado</td></tr>
+      <tr><td><strong>Conversas em DM</strong></td><td>toda palavra-chave respondida no mesmo dia</td><td>idem</td><td>idem</td></tr>
+      <tr><td><strong>Reuniões com ICP comprador</strong></td><td>1 a 2</td><td>3 a 5</td><td>5 a 8</td></tr>
+      <tr><td><strong>Propostas enviadas</strong></td><td>—</td><td>1 a 2</td><td>3 a 5</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="box alerta">
+    <div class="box-lbl">Honestidade sobre esses números</div>
+    <p>As faixas de reunião e proposta são <strong>projeção, não promessa</strong>. Sem a baseline de SSI e sem histórico de publicação da Lucia, não há como calibrar melhor do que isso agora. <strong>No Encontro 3 elas devem ser revisadas com dado real</strong> das primeiras semanas — e ajustadas para cima ou para baixo sem cerimônia.</p>
+    <p style="margin-top:10px">A meta de SSI também está condicionada à baseline que ainda não temos. Se ela vier alta em "construir relacionamentos" (comum em quem tem rede grande e ativa), o teto muda.</p>
+  </div>
+
+  <div class="box ok">
+    <div class="box-lbl">A métrica que decide se o plano está funcionando</div>
+    <p>Não é impressão, não é seguidor e não é SSI. É <strong>conversa em DM com alguém que tem orçamento</strong>.</p>
+    <p style="margin-top:10px">Se o alcance subir e a DM não encher, o problema está na isca. Se a DM encher de coordenador e gerente em vez de RH e diretoria, o problema está no eixo do conteúdo — e a correção é voltar às 8 dores da Seção 02, não postar mais.</p>
+  </div>
+
+  <h3>As 5 skills entregues</h3>
+  <div class="tw"><table>
+    <thead><tr><th style="width:34%">Skill</th><th>O que faz</th></tr></thead>
+    <tbody>
+      <tr><td class="kw">lucia-oliveira-linkedin</td><td>Escreve os posts. Traz o eixo B2B, as 8 dores, os 4 pilares, as 8 iscas, as estruturas de cada tipo de post, o protocolo de CTA e a tabela de tradução de vocabulário.</td></tr>
+      <tr><td class="kw">lucia-oliveira-design</td><td>Identidade visual do Instituto — paleta, tipografia, as 7 regras do brandbook, os 5 formatos de criativo que passam no teste de dwell time e a estrutura dos materiais de isca.</td></tr>
+      <tr><td class="kw">lucia-oliveira-ssi-analysis</td><td>Lê o print do SSI, compara com a baseline, identifica o gargalo e devolve no máximo 2 ações prioritárias.</td></tr>
+      <tr><td class="kw">lucia-oliveira-ideias-lead-magnet</td><td>Banco de 60+ ângulos de post organizados pelas 8 iscas, cada um com pilar e tese. Expande o calendário sem reinventar a estratégia.</td></tr>
+      <tr><td class="kw">lucia-oliveira-pesquisa-atualidade</td><td>Busca na web dados e pesquisas recentes sobre liderança, turnover, sucessão e efetividade de treinamento, e devolve já com o ângulo e o hook prontos.</td></tr>
+    </tbody>
+  </table></div>
+  <p style="font-size:12px;color:rgba(58,43,38,.6)">Instaladas em <span style="font-family:monospace">~/.claude/skills/lucia-oliveira/</span>. A skill de conteúdo carrega junto a <span style="font-family:monospace">skill-referencias-demanda-infinita</span>, que traz as regras do algoritmo do LinkedIn pós-Authenticity Update.</p>
+</div>
+
+<div class="foot">
+  <div class="foot-sig">Lucia Oliveira</div>
+  <div class="foot-i">INSTITUTO ELEVE O SER · ELEVEOSER.COM</div>
+  <div class="foot-d">
+    Plano de Ação LinkedIn 90 Dias · Método Demanda Infinita®<br>
+    Construído a partir de 9 documentos · 25 de agosto de 2026<br>
+    Regras do algoritmo conforme o Authenticity Update do LinkedIn (março/2026) e o protocolo de lead magnet validado em agosto de 2026.
+  </div>
+</div>
+
+</div>
+</body>
+</html>
