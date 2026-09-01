@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Análise de Modelo de Negócio e Oferta — Lucia Oliveira · Instituto Eleve o Ser</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --uva:#1A1218; --latao:#9C8252; --latao-cl:#C4A96A; --marmore:#E8E2D5;
+  --marmore-s:#F4EFE6; --terra:#3A2B26; --vinho:#5E4346;
+  --azul:#2C4A6E; --verde:#2E6B4F; --vermelho:#A3423C;
+}
+html,body{background:#D9D3C7}
+body{font-family:'Montserrat',sans-serif;color:var(--terra);font-weight:300;
+  -webkit-print-color-adjust:exact;print-color-adjust:exact}
+
+.sheet{width:210mm;min-height:297mm;background:var(--marmore-s);margin:0 auto 10mm;
+  padding:17mm 19mm 15mm;position:relative;box-shadow:0 3px 26px rgba(26,18,24,.18);
+  page-break-after:always;overflow:hidden;display:flex;flex-direction:column}
+.sheet.dark{background:var(--uva)}
+.sheet:last-child{page-break-after:auto}
+
+/* CABEÇALHO CORRIDO */
+.rt{display:flex;justify-content:space-between;align-items:baseline;
+  border-bottom:1px solid rgba(156,130,82,.28);padding-bottom:7px;margin-bottom:16px}
+.rt-l{font-family:'Cinzel',serif;font-size:7.5px;font-weight:700;letter-spacing:3px;color:var(--latao)}
+.rt-r{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2px;color:rgba(58,43,38,.42)}
+.pg{position:absolute;bottom:9mm;right:19mm;font-family:'Cinzel',serif;
+  font-size:8px;letter-spacing:2px;color:rgba(58,43,38,.34)}
+
+/* CAPA */
+.cv{flex:1;display:flex;flex-direction:column;justify-content:center;position:relative}
+.sheet.dark::before{content:'';position:absolute;right:-70mm;top:-40mm;width:150mm;height:150mm;
+  border-radius:50%;border:1px solid rgba(156,130,82,.16)}
+.sheet.dark::after{content:'';position:absolute;right:-20mm;bottom:-55mm;width:95mm;height:95mm;
+  border-radius:50%;border:1px solid rgba(156,130,82,.11)}
+.cv-logo{font-family:'Cinzel',serif;font-size:10px;font-weight:700;letter-spacing:6px;color:var(--latao)}
+.cv-rule{width:46px;height:2px;background:var(--latao);margin:12px 0 46px}
+.cv-eb{font-size:9px;font-weight:600;letter-spacing:3px;text-transform:uppercase;
+  color:var(--latao-cl);margin-bottom:16px}
+.cv h1{font-family:'Philosopher',serif;font-size:40px;font-weight:700;color:var(--marmore);
+  line-height:1.14;margin-bottom:16px}
+.cv h1 em{font-style:italic;color:var(--latao-cl)}
+.cv-sub{font-family:'Philosopher',serif;font-size:16px;color:rgba(232,226,213,.6);line-height:1.6;max-width:135mm}
+.cv-line{height:1px;background:rgba(156,130,82,.24);margin:38px 0 22px}
+.cv-meta{font-size:10px;color:rgba(232,226,213,.44);line-height:2.1}
+.cv-meta b{color:var(--latao-cl);font-weight:600}
+
+/* TÍTULOS */
+h2{font-family:'Philosopher',serif;font-size:25px;font-weight:700;color:var(--uva);
+  line-height:1.2;margin-bottom:5px}
+h2 em{font-style:italic;color:var(--vinho)}
+.h2-rule{width:100%;height:1px;background:linear-gradient(to right,var(--latao),transparent);
+  opacity:.45;margin-bottom:16px}
+h3{font-family:'Philosopher',serif;font-size:16px;font-weight:700;color:var(--uva);
+  margin:18px 0 8px;padding-bottom:5px;border-bottom:1px solid rgba(156,130,82,.2)}
+h4{font-family:'Cinzel',serif;font-size:8.5px;font-weight:700;letter-spacing:2.6px;
+  color:var(--latao);margin:16px 0 7px;text-transform:uppercase}
+p{font-size:10.5px;line-height:1.78;margin-bottom:8px}
+strong{font-weight:600;color:var(--uva)}
+em.q{font-family:'Philosopher',serif;font-style:italic;color:var(--vinho)}
+ul{margin:6px 0 10px 15px}li{font-size:10.5px;line-height:1.72;margin-bottom:5px}
+.lead{font-size:11.5px;line-height:1.8;color:var(--terra);margin-bottom:14px}
+
+/* ACHADO */
+.ach{background:#fff;border-left:3px solid var(--latao);padding:14px 17px;margin-bottom:12px;
+  box-shadow:0 1px 9px rgba(58,43,38,.05)}
+.ach.crit{border-left-color:var(--vermelho)}
+.ach.ok{border-left-color:var(--verde);background:#F4F8F5}
+.ach.info{border-left-color:var(--azul);background:#F3F6FA}
+.ach-n{font-family:'Cinzel',serif;font-size:8px;font-weight:700;letter-spacing:2.4px;
+  color:var(--latao);margin-bottom:5px;text-transform:uppercase}
+.ach.crit .ach-n{color:var(--vermelho)}
+.ach.ok .ach-n{color:var(--verde)}
+.ach.info .ach-n{color:var(--azul)}
+.ach-t{font-family:'Philosopher',serif;font-size:15px;font-weight:700;color:var(--uva);
+  margin-bottom:7px;line-height:1.3}
+.ach p:last-child,.ach ul:last-child{margin-bottom:0}
+.fix{background:rgba(156,130,82,.1);border-left:2px solid var(--latao);padding:9px 12px;margin-top:9px}
+.fix b{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2px;color:var(--latao);
+  display:block;margin-bottom:3px;font-weight:700}
+.fix p{font-size:10px;margin-bottom:0;line-height:1.72}
+
+/* TABELAS */
+table{width:100%;border-collapse:collapse;font-size:9.5px;background:#fff;margin:10px 0 12px}
+th{background:var(--uva);color:var(--marmore);font-family:'Cinzel',serif;font-size:7.5px;
+  font-weight:600;letter-spacing:1.3px;text-transform:uppercase;padding:8px 10px;text-align:left}
+td{padding:8px 10px;border-bottom:1px solid rgba(156,130,82,.15);vertical-align:top;line-height:1.6}
+tr:last-child td{border-bottom:none}
+tbody tr:nth-child(even){background:rgba(244,239,230,.75)}
+td.c{text-align:center}
+td.kw{font-family:'Cinzel',serif;font-weight:700;color:var(--latao);letter-spacing:1.2px;white-space:nowrap}
+.riscado{text-decoration:line-through;color:rgba(58,43,38,.4)}
+
+/* GRIDS */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin:11px 0}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:11px 0}
+.card{background:#fff;padding:13px 15px;border-top:2px solid var(--latao);
+  box-shadow:0 1px 9px rgba(58,43,38,.05)}
+.card.v{border-top-color:var(--vinho)}.card.a{border-top-color:var(--azul)}
+.card-l{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2px;color:var(--latao);margin-bottom:4px}
+.card.v .card-l{color:var(--vinho)}.card.a .card-l{color:var(--azul)}
+.card-t{font-family:'Philosopher',serif;font-size:14px;font-weight:700;color:var(--uva);margin-bottom:5px}
+.card p{font-size:9.5px;line-height:1.68;margin-bottom:0}
+
+.quote{font-family:'Philosopher',serif;font-size:14.5px;font-style:italic;color:var(--uva);
+  line-height:1.52;padding:13px 0 13px 18px;border-left:3px solid var(--latao);margin:13px 0}
+.quote span{color:var(--latao);font-style:normal;font-size:8.5px;font-family:'Montserrat',sans-serif;
+  display:block;margin-top:7px;letter-spacing:.4px;font-weight:400}
+
+.niv{background:#fff;margin-bottom:9px;box-shadow:0 1px 9px rgba(58,43,38,.05);display:grid;
+  grid-template-columns:26mm 1fr;overflow:hidden}
+.niv-l{background:var(--uva);padding:12px 11px;display:flex;flex-direction:column;justify-content:center}
+.niv-l .n{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2px;color:var(--latao);margin-bottom:4px}
+.niv-l .p{font-family:'Philosopher',serif;font-size:15px;font-weight:700;color:var(--marmore);line-height:1.1}
+.niv-l .p small{display:block;font-size:8px;color:rgba(232,226,213,.5);margin-top:3px;font-family:'Montserrat',sans-serif}
+.niv-r{padding:12px 15px}
+.niv-r .t{font-family:'Philosopher',serif;font-size:14px;font-weight:700;color:var(--uva);margin-bottom:4px}
+.niv-r p{font-size:9.5px;line-height:1.68;margin-bottom:0}
+
+.prio{display:grid;grid-template-columns:11mm 1fr 24mm;gap:11px;padding:9px 0;
+  border-bottom:1px solid rgba(156,130,82,.18);align-items:start}
+.prio:last-child{border-bottom:none}
+.prio-n{font-family:'Philosopher',serif;font-size:19px;font-weight:700;color:var(--latao);
+  line-height:1;text-align:center}
+.prio-t{font-size:11px;color:var(--uva);font-weight:500;line-height:1.5}
+.prio-d{font-size:9.5px;color:rgba(58,43,38,.62);margin-top:3px;line-height:1.6}
+.prio-w{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:1.5px;color:var(--vinho);
+  text-align:right;padding-top:3px;font-weight:600;line-height:1.7}
+
+.perg{background:#fff;padding:13px 16px;margin-bottom:9px;border-left:3px solid var(--vinho);
+  box-shadow:0 1px 9px rgba(58,43,38,.05)}
+.perg .n{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2px;color:var(--vinho);margin-bottom:4px;font-weight:700}
+.perg .t{font-family:'Philosopher',serif;font-size:13.5px;font-weight:700;color:var(--uva);
+  margin-bottom:5px;line-height:1.35}
+.perg p{font-size:9.5px;line-height:1.68;margin-bottom:0}
+
+.sig{margin-top:auto;padding-top:20px}
+.sig-n{font-family:'Great Vibes',cursive;font-size:27px;color:var(--latao-cl);margin-bottom:3px}
+.sig-i{font-family:'Cinzel',serif;font-size:8px;letter-spacing:3.4px;color:rgba(156,130,82,.62)}
+
+.tight .ach{padding:12px 15px;margin-bottom:9px}
+.tight p{line-height:1.7}
+.tight .quote{padding:10px 0 10px 16px;margin:10px 0}
+.tight .lead{margin-bottom:11px}
+@media print{
+  html,body{background:#fff}
+  .sheet{margin:0;box-shadow:none;page-break-after:always}
+  .sheet:last-child{page-break-after:auto}
+  @page{size:A4;margin:0}
+}
+</style>
+</head>
+<body>
+
+<!-- ═════ 1 · CAPA ═════ -->
+<div class="sheet dark">
+  <div class="cv">
+    <div class="cv-logo">INSTITUTO ELEVE O SER</div>
+    <div class="cv-rule"></div>
+    <div class="cv-eb">Análise independente</div>
+    <h1>Modelo de negócio<br>e <em>oferta</em>.</h1>
+    <div class="cv-sub">O que já está forte, os nove pontos que estão custando venda, e como a oferta ficaria depois dos ajustes.</div>
+    <div class="cv-line"></div>
+    <div class="cv-meta">
+      Preparado para <b>Lucia Oliveira</b><br>
+      Por <b>Igor Miguel · Método Demanda Infinita®</b><br>
+      25 de agosto de 2026
+    </div>
+  </div>
+</div>
+
+<!-- ═════ 2 · MÉTODO + RETRATO ═════ -->
+<div class="sheet">
+  <div class="rt"><span class="rt-l">ANÁLISE DE OFERTA</span><span class="rt-r">COMO FOI FEITA</span></div>
+  <h2>De onde <em>saiu</em> esta análise</h2><div class="h2-rule"></div>
+
+  <p class="lead">Esta leitura não veio de opinião sobre o mercado de liderança. Veio dos seus próprios documentos — nove deles, lidos por inteiro, cruzados entre si. Boa parte do que está aqui <strong>você já escreveu</strong>; o que faltava era colocar lado a lado e ver onde um documento contradiz o outro.</p>
+
+  <h4>Os documentos lidos</h4>
+  <table>
+    <tbody>
+      <tr><td>Proposta de Mentoria de Liderança Individual — Grupo Recovery (14 páginas)</td></tr>
+      <tr><td>Produto, pilares e dores (PF) · Briefing de público (PF) · Briefing de público (LinkedIn)</td></tr>
+      <tr><td>Posicionamento e mapa estratégico · Mapeamento de estratégia corporativa</td></tr>
+      <tr><td>Minha História · Brandbook Instituto Eleve o Ser · Bios, templates e apresentação</td></tr>
+    </tbody>
+  </table>
+
+  <h4>As três lentes usadas</h4>
+  <div class="g3">
+    <div class="card"><div class="card-l">LENTE 1</div><div class="card-t">Mensagem</div>
+      <p>Em que nível de consciência o comprador está, e se a mensagem fala com ele nesse nível.</p></div>
+    <div class="card v"><div class="card-l">LENTE 2</div><div class="card-t">Oferta</div>
+      <p>Como o valor está montado, como o preço está estruturado, e o que ancora ou destrói a percepção de risco.</p></div>
+    <div class="card a"><div class="card-l">LENTE 3</div><div class="card-t">Funil</div>
+      <p>O caminho entre "nunca ouvi falar" e "assinei", e quais degraus estão faltando nesse caminho.</p></div>
+  </div>
+
+  <h3>O retrato do negócio hoje</h3>
+  <table>
+    <thead><tr><th style="width:36mm">Dimensão</th><th>Como está</th></tr></thead>
+    <tbody>
+      <tr><td><strong>O que vende</strong></td><td>Mentoria de liderança individual contratada pela empresa · treinamentos corporativos · Programa Eleve</td></tr>
+      <tr><td><strong>Para quem</strong></td><td>Comprador: RH, DHO, People, Diretoria. Beneficiário: coordenadores, gerentes e heads — financeiro e serviços</td></tr>
+      <tr><td><strong>Por quanto</strong></td><td>R$ 15.000 · R$ 21.000 · R$ 27.000 por participante</td></tr>
+      <tr><td><strong>Duração</strong></td><td>5-6 meses · 9 meses · 12 meses</td></tr>
+      <tr><td><strong>Mecanismo</strong></td><td>Jornada de 4 etapas: Autoconhecimento → Líder do Negócio → Influência e Posicionamento → Liderança de Pessoas</td></tr>
+      <tr><td><strong>Autoridade</strong></td><td>20+ anos de carreira corporativa até a diretoria · Master Coach · coautora de <em>Mulheres Extraordinárias</em></td></tr>
+      <tr><td><strong>Prova de cliente</strong></td><td>Nenhuma documentada nos materiais analisados</td></tr>
+    </tbody>
+  </table>
+
+  <div class="ach info">
+    <div class="ach-n">RESSALVA HONESTA</div>
+    <p>Analisei o que estava nos nove documentos. <strong>Se existir case entregue, depoimento ou contrato assinado que não apareceu neles, parte do que está aqui muda</strong> — principalmente o ponto sobre ausência de prova. Vale conferir antes de tratar como diagnóstico fechado.</p>
+  </div>
+  <div class="pg">02</div>
+</div>
+
+<!-- ═════ 3 · O QUE ESTÁ FORTE ═════ -->
+<div class="sheet">
+  <div class="rt"><span class="rt-l">ANÁLISE DE OFERTA</span><span class="rt-r">O QUE JÁ ESTÁ FORTE</span></div>
+  <h2>Começando pelo que <em>não</em> deve ser mexido</h2><div class="h2-rule"></div>
+
+  <p class="lead">Cinco coisas neste negócio estão acima da média do mercado. Elas não são o problema — em vários casos, são justamente o que os ajustes vão colocar em evidência.</p>
+
+  <div class="ach ok">
+    <div class="ach-n">FORTE · 01</div>
+    <div class="ach-t">A jornada de 4 etapas é um mecanismo de verdade</div>
+    <p>Autoconhecimento → Líder do Negócio → Influência e Posicionamento → Liderança de Pessoas. Cada etapa tem movimento declarado, tópicos e resultado esperado. A maioria dos concorrentes vende "módulos"; você tem uma <strong>sequência com lógica de progressão</strong>. Isso é raro e é o ativo mais valioso da estrutura.</p>
+  </div>
+
+  <div class="ach ok">
+    <div class="ach-n">FORTE · 02</div>
+    <div class="ach-t">A tradução da linguagem já está escrita — e está certa</div>
+    <p>O documento de posicionamento já classificou a abordagem tradicional como saturada e escreveu a tradução premium: não dizer "team building", dizer <em class="q">"confiança para acelerar a execução"</em>. Está pronta e é boa — falta chegar no perfil, na proposta e no conteúdo.</p>
+  </div>
+
+  <div class="ach ok">
+    <div class="ach-n">FORTE · 03</div>
+    <div class="ach-t">O mapa de dores invisíveis é material de altíssimo nível</div>
+    <p>As dores premium de RH e diretoria — <em class="q">"estou vendo o acidente acontecer em câmera lenta"</em>, <em class="q">"eu cuido de todos, mas quem cuida de mim?"</em> — fazem o comprador parar de rolar a tela. Viraram a base de todo o conteúdo do plano de 90 dias.</p>
+  </div>
+
+  <div class="ach ok">
+    <div class="ach-n">FORTE · 04</div>
+    <div class="ach-t">A sua história é o ativo de conversão mais forte que existe aqui</div>
+    <p>Você não fala de liderança como quem estudou liderança. Você foi a diretora que entregava número e cujo time tinha medo — e descobriu isso pela boca de uma gestora do próprio time. <strong>E a dor não foi ouvir: foi descobrir que você não sabia fazer diferente.</strong></p>
+    <p>Ninguém copia isso. É o argumento que sobrevive a qualquer comparação de preço.</p>
+  </div>
+
+  <div class="ach ok">
+    <div class="ach-n">FORTE · 05</div>
+    <div class="ach-t">O brandbook está completo e coerente</div>
+    <p>Paleta com papéis definidos, quatro tipografias com uso delimitado, sete regras de aplicação e um símbolo com significado declarado. Muita empresa de porte não tem isso. Não precisa de nenhuma alteração — só de aplicação consistente.</p>
+  </div>
+
+  <div class="ach info">
+    <div class="ach-n">E UM DADO QUE VOCÊ AINDA NÃO ESTÁ USANDO</div>
+    <p>A sua área entrou para as <strong>três primeiras de toda a empresa em clima organizacional</strong>, virou celeiro de talentos, o turnover caiu e o engajamento subiu — e os resultados apareceram <em>por causa</em> da mudança de comportamento, não apesar dela.</p>
+    <p>Isso não está na proposta comercial. É a prova mais forte que você tem enquanto não houver case de cliente.</p>
+  </div>
+  <div class="pg">03</div>
+</div>
+
+<!-- ═════ 4 · BLOCO A ═════ -->
+<div class="sheet tight">
+  <div class="rt"><span class="rt-l">BLOCO A · MENSAGEM</span><span class="rt-r">ACHADOS 1 A 3</span></div>
+  <h2>O que o comprador precisa ouvir — e <em>não</em> está ouvindo</h2><div class="h2-rule"></div>
+
+  <p class="lead">O seu próprio mapa estratégico classifica o público como <strong>consciente da solução, mas frustrado por não ter obtido resultado sustentável</strong>. Um comprador nesse estágio não compra mais benefício — compra <strong>mecanismo</strong>. E mecanismo só existe comercialmente quando tem nome.</p>
+
+  <div class="ach crit">
+    <div class="ach-n">AJUSTE 01 · IMPACTO ALTO</div>
+    <div class="ach-t">O seu mecanismo mais forte não tem nome</div>
+    <p>A jornada de 4 etapas não aparece na proposta, nem na bio, nem na headline. O que a proposta apresenta é <em class="q">"Diagnóstico Estratégico → Plano Personalizado → Implementação Prática"</em> — o processo genérico de qualquer consultoria do mundo.</p>
+    <p>Sem nome, o comprador não tem como diferenciar você de mais um fornecedor de treinamento — e a decisão volta a ser por preço.</p>
+    <div class="fix"><b>AJUSTE</b><p>Nomear a jornada e colocá-la no centro da proposta e do perfil. E traduzir a Etapa 1 — hoje "Autoconhecimento" — para <strong>"Diagnóstico de Estilo de Liderança"</strong>. O conteúdo é o mesmo; o nome decide se a diretoria aprova o orçamento. É a sua própria regra: <em class="q">"nunca mencione autoconhecimento no contexto corporativo"</em>.</p></div>
+  </div>
+
+  <div class="ach crit">
+    <div class="ach-n">AJUSTE 02 · IMPACTO ALTO</div>
+    <div class="ach-t">A promessa e o produto não têm a mesma duração</div>
+    <p>Todos os briefings prometem <strong>"Transformação em 90 dias"</strong>. A proposta comercial vende <strong>5 a 6 meses</strong> no Programa Essencial, 9 meses no Avançado e 12 no Premium.</p>
+    <p>Quem leu a promessa de 90 dias e recebe uma proposta de 6 meses lê isso como <strong>preço dobrado sem explicação</strong>. É uma objeção que nasce dentro da própria proposta.</p>
+    <div class="fix"><b>AJUSTE</b><p>Dizer a verdade, que é mais forte que os dois números isolados: <strong>"90 dias para os primeiros comportamentos mudarem. 5 a 6 meses para o indicador da área mudar."</strong> Mantém a promessa rápida e explica o prazo longo em vez de escondê-lo.</p></div>
+  </div>
+
+  <div class="ach crit">
+    <div class="ach-n">AJUSTE 03 · IMPACTO ALTO</div>
+    <div class="ach-t">A sua história está fora do material de venda</div>
+    <p>Não há uma linha da sua trajetória na proposta ao Recovery. O que está lá é <em class="q">"Mentora com 20+ anos em liderança corporativa e certificações internacionais"</em> — exatamente o que todo concorrente escreve. O que só você pode dizer, e que o seu próprio briefing já formulou:</p>
+    <div class="quote">Eu já estive do outro lado da mesa. Já fui a líder que entregava resultado, mas precisava aprender a gerar resultado através das pessoas.
+      <span>— Briefing de público · LinkedIn</span></div>
+    <div class="fix"><b>AJUSTE</b><p>Abrir a proposta com meia página de história, não com o desafio genérico da liderança moderna. Quem compra mentoria compra <strong>a pessoa</strong> antes do programa.</p></div>
+  </div>
+  <div class="pg">04</div>
+</div>
+
+<!-- ═════ 5 · ESCADA ═════ -->
+<div class="sheet">
+  <div class="rt"><span class="rt-l">BLOCO B · OFERTA E PREÇO</span><span class="rt-r">ACHADO 4</span></div>
+  <h2>A escada de preço está vendendo <em>hora</em></h2><div class="h2-rule"></div>
+
+  <p class="lead">Este é o ajuste mais caro da lista — e o mais rápido de fazer, porque não exige mudar preço nenhum.</p>
+
+  <table>
+    <thead><tr><th>Programa</th><th class="c">Duração</th><th class="c">Sessões</th><th class="c">Investimento</th><th class="c">Preço por sessão</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Essencial</strong></td><td class="c">5-6 meses</td><td class="c">10</td><td class="c">R$ 15.000</td><td class="c"><strong>R$ 1.500</strong></td></tr>
+      <tr><td><strong>Avançado</strong></td><td class="c">9 meses</td><td class="c">15</td><td class="c">R$ 21.000</td><td class="c"><strong>R$ 1.400</strong></td></tr>
+      <tr><td><strong>Premium</strong></td><td class="c">12 meses</td><td class="c">20</td><td class="c">R$ 27.000</td><td class="c"><strong>R$ 1.350</strong></td></tr>
+    </tbody>
+  </table>
+
+  <div class="ach crit">
+    <div class="ach-n">AJUSTE 04 · IMPACTO MUITO ALTO</div>
+    <div class="ach-t">Quanto mais o cliente compra, menos vale a sua hora</div>
+    <p>A escada sobe por <strong>volume de sessão</strong>. O que diferencia um plano do outro, na leitura de quem compra, é quantos encontros vêm no pacote. E o preço por encontro cai de R$1.500 para R$1.350 conforme o pacote aumenta.</p>
+    <p>Duas consequências, as duas ruins:</p>
+    <ul>
+      <li><strong>Ensina o comprador a negociar por hora.</strong> Se o valor é a sessão, a próxima pergunta dele é "e se fossem 8 sessões?". Você acabou de entregar a régua da negociação.</li>
+      <li><strong>Torna você comparável.</strong> Preço por hora é a métrica que qualquer concorrente consegue igualar. É exatamente a comparação por preço que o seu documento de posicionamento diz que precisa evitar.</li>
+    </ul>
+    <p>E há um efeito colateral: o item mais valioso de todo o portfólio — a <strong>sessão de trabalho com o time do líder</strong> — está enterrado como um bullet no meio do Premium de 12 meses. É a única entrega que sai da cabeça do líder e chega na operação, e ela está posicionada como brinde.</p>
+  </div>
+
+  <div class="ach">
+    <div class="ach-n">O PRINCÍPIO</div>
+    <div class="ach-t">A escada deve subir por escopo de resultado, não por volume de encontro</div>
+    <p>A pergunta que separa um nível do outro não pode ser <em class="q">"quantas sessões?"</em>. Tem que ser <em class="q">"até onde a mudança chega?"</em> — só o líder, o líder e o time dele, ou a camada de liderança inteira.</p>
+    <p>Quando a régua é escopo, o comprador para de calcular hora e passa a calcular alcance. E aí o preço deixa de ser comparável, porque nenhum concorrente vende exatamente o mesmo escopo.</p>
+    <p><strong>O melhor desta correção:</strong> ela não exige mudar nenhum dos três preços. Só reorganiza o que cada um significa. A proposta na página seguinte usa exatamente R$15.000, R$21.000 e R$27.000.</p>
+  </div>
+  <div class="pg">05</div>
+</div>
+
+<!-- ═════ 6 · A ESCADA RECONSTRUÍDA ═════ -->
+<div class="sheet">
+  <div class="rt"><span class="rt-l">PROPOSTA DE AJUSTE</span><span class="rt-r">A ESCADA RECONSTRUÍDA</span></div>
+  <h2>Como a oferta <em>ficaria</em></h2><div class="h2-rule"></div>
+
+  <p class="lead">Mesmos preços. Outra régua. O que muda entre um nível e outro passa a ser <strong>até onde a mudança chega</strong>.</p>
+
+  <div class="niv">
+    <div class="niv-l"><div class="n">ENTRADA</div><div class="p">a definir<small>abatido do programa</small></div></div>
+    <div class="niv-r"><div class="t">Diagnóstico de Liderança da Área</div>
+      <p>2 a 3 semanas. Entrega o mapa dos comportamentos que estão travando resultado naquela área, com baseline medido. Se a empresa seguir para o programa, o valor é abatido integralmente. <strong>É o degrau que hoje não existe</strong> — ver Ajuste 08.</p></div>
+  </div>
+
+  <div class="niv">
+    <div class="niv-l"><div class="n">NÍVEL 1</div><div class="p">R$ 15.000<small>por líder</small></div></div>
+    <div class="niv-r"><div class="t">O líder</div>
+      <p>O gestor específico que a empresa precisa destravar. Jornada completa das 4 etapas, alinhamento com gestor e RH, relatório final com plano de ação. <strong>A mudança chega no comportamento do líder.</strong></p></div>
+  </div>
+
+  <div class="niv">
+    <div class="niv-l"><div class="n">NÍVEL 2</div><div class="p">R$ 21.000<small>por líder</small></div></div>
+    <div class="niv-r"><div class="t">O líder e o time dele</div>
+      <p>Tudo do Nível 1, mais o trabalho direto com a equipe: sessão com o time, alinhamento de expectativas individuais e acompanhamento do efeito na operação. <strong>A mudança chega no time.</strong> É aqui que a sessão de team building sai de brinde e vira o motivo do nível existir.</p></div>
+  </div>
+
+  <div class="niv">
+    <div class="niv-l"><div class="n">NÍVEL 3</div><div class="p">R$ 27.000<small>por líder</small></div></div>
+    <div class="niv-r"><div class="t">A camada de liderança</div>
+      <p>Vários líderes em paralelo, com linguagem comum, ritual de gestão instalado e assessment 360º. <strong>A mudança chega na forma como a empresa lidera.</strong> Os descontos por volume que você já pratica (5% / 10% / 13%) se encaixam naturalmente aqui — e é onde mora o contrato grande e a recorrência.</p></div>
+  </div>
+
+  <h3>Por que isso muda a conversa comercial</h3>
+  <div class="g2">
+    <div class="card v"><div class="card-l">ANTES</div><div class="card-t">"Qual pacote?"</div>
+      <p>O RH escolhe pelo orçamento disponível e pergunta se dá pra tirar sessões. A conversa é sobre quantidade.</p></div>
+    <div class="card"><div class="card-l">DEPOIS</div><div class="card-t">"Até onde precisa chegar?"</div>
+      <p>O RH descreve o problema e o nível se define sozinho. A conversa é sobre escopo — e escopo é diagnóstico, não negociação.</p></div>
+  </div>
+
+  <div class="ach info">
+    <div class="ach-n">SOBRE O PREÇO DO DIAGNÓSTICO</div>
+    <p>Deixei em aberto de propósito — é decisão sua e depende de quanto tempo ele consome de fato. A regra: <strong>alto o suficiente para qualificar</strong> (quem não paga não estava comprando) <strong>e baixo o suficiente para não exigir aprovação de comitê</strong> (se precisar de três assinaturas, deixou de ser porta de entrada).</p>
+  </div>
+  <div class="pg">06</div>
+</div>
+
+<!-- ═════ 7 · MEDIÇÃO E GARANTIA ═════ -->
+<div class="sheet">
+  <div class="rt"><span class="rt-l">BLOCO B · OFERTA E PREÇO</span><span class="rt-r">ACHADOS 5 E 6</span></div>
+  <h2>Como provar, e como <em>tirar o risco</em></h2><div class="h2-rule"></div>
+
+  <div class="ach crit">
+    <div class="ach-n">AJUSTE 05 · IMPACTO MUITO ALTO</div>
+    <div class="ach-t">Não existe medição do próprio programa</div>
+    <p>A proposta traz cinco dados globais de ROI — Gallup, ICF, PwC, Torch — e <strong>nenhuma métrica do seu programa</strong>. Ela prova que coaching funciona no mundo. Não prova que <em>este</em> programa funcionou <em>aqui</em>.</p>
+    <p>Isso pesa mais do que parece, porque o seu comprador é um RH cuja dor número um — segundo o seu próprio mapeamento — é o medo de ser visto como área de custo. Ele não precisa de um argumento para acreditar. Precisa de um número para levar à diretoria.</p>
+    <p>É também o que responde a objeção que você mesma listou como a oculta mais importante: <em class="q">"como sei que isso não será apenas mais um treinamento motivacional?"</em> Hoje ela é respondida por discurso. Precisa ser respondida por estrutura.</p>
+    <div class="fix"><b>AJUSTE — TRÊS MARCOS, DENTRO DO QUE VOCÊ JÁ ENTREGA</b>
+      <p><strong>Marco 0 (semana 1):</strong> baseline — clima ou eNPS da área do líder, turnover dos últimos 12 meses, e três comportamentos observáveis acordados entre líder, gestor e RH.<br>
+      <strong>Marco 1 (metade):</strong> os mesmos três comportamentos, avaliados por quem convive. Já está previsto no escopo como "alinhamento na metade do processo".<br>
+      <strong>Marco 2 (fim):</strong> a mesma medida do baseline, lado a lado, dentro do relatório final que já existe.</p></div>
+    <p style="margin-top:9px">Isso quase não adiciona trabalho — e transforma o relatório final de entregável em <strong>argumento de renovação</strong>.</p>
+  </div>
+
+  <div class="ach crit">
+    <div class="ach-n">AJUSTE 06 · IMPACTO MÉDIO</div>
+    <div class="ach-t">A garantia está sinalizando risco em vez de removê-lo</div>
+    <p>Texto atual: <em class="q">"Se após as primeiras 3 sessões a empresa não estiver satisfeita, devolvemos 70% do investimento sem questionamentos."</em> Três problemas:</p>
+    <ul>
+      <li><strong>"70%" e "sem questionamentos" se contradizem na mesma frase.</strong> Se não há questionamento, por que retém 30%? A pergunta nasce na cabeça de quem lê.</li>
+      <li><strong>Quem julga a satisfação?</strong> A mentoria é confidencial com o líder. Depois de três sessões, a empresa não tem como avaliar conteúdo — só presença.</li>
+      <li><strong>Garantia baseada em satisfação é fraca.</strong> Satisfação é subjetiva e não está sob seu controle. Execução está.</li>
+    </ul>
+    <div class="fix"><b>AJUSTE SUGERIDO</b><p><em>"Se após as três primeiras sessões o líder ou a empresa entender que não é o caminho, encerramos e devolvemos integralmente o valor das sessões não realizadas."</em></p></div>
+    <p style="margin-top:9px">O custo real dessa garantia é <strong>menor</strong> que o da atual — você devolve o que ainda não trabalhou, em vez de 70% do todo. E a percepção de risco para o comprador cai muito mais.</p>
+  </div>
+  <div class="pg">07</div>
+</div>
+
+<!-- ═════ 8 · PROVA E FUNIL ═════ -->
+<div class="sheet">
+  <div class="rt"><span class="rt-l">BLOCO B E C</span><span class="rt-r">ACHADOS 7 E 8</span></div>
+  <h2>A prova que falta e o degrau que <em>não existe</em></h2><div class="h2-rule"></div>
+
+  <div class="ach crit">
+    <div class="ach-n">AJUSTE 07 · IMPACTO ALTO</div>
+    <div class="ach-t">A proposta pede R$27.000 sem uma única prova</div>
+    <p>O item 8 do seu próprio mapa estratégico já reconhece a necessidade: <em class="q">"cases corporativos, depoimentos de RHs, depoimentos de líderes, indicadores de satisfação, empresas atendidas, histórias de transformação"</em>. A proposta enviada não tem nenhum deles.</p>
+    <p>Enquanto não houver case de cliente entregue e autorizado, <strong>a prova disponível é a sua</strong> — e ela é forte: a sua área entrou para as três primeiras da empresa inteira em clima organizacional, virou celeiro de talentos, o turnover caiu e o engajamento subiu. Nada disso está na proposta.</p>
+    <div class="fix"><b>AJUSTE</b><p>Curto prazo: colocar o seu próprio resultado na proposta, como prova de que o método funcionou primeiro em você. Médio prazo: depoimento em vídeo ou texto do primeiro cliente entregue, com autorização por escrito. Até lá, todo caso citado vai anonimizado — e <strong>proposta em aberto não pode ser citada como cliente</strong>.</p></div>
+  </div>
+
+  <div class="ach crit">
+    <div class="ach-n">AJUSTE 08 · IMPACTO MUITO ALTO</div>
+    <div class="ach-t">O funil salta de conteúdo gratuito para R$15.000</div>
+    <p>Não existe degrau intermediário. O comprador vai de "li um post" para "assine R$15.000 por participante" sem nada no meio que permita experimentar o método com risco baixo.</p>
+    <p>Para uma compra desse valor, dentro de uma empresa, isso quase sempre significa: reunião → proposta → "vou levar para a diretoria" → silêncio. Não porque a oferta é ruim, mas porque <strong>a primeira decisão pedida é grande demais</strong>.</p>
+    <p>A peça que resolve isso já existe — e está enterrada como bônus na lista de diferenciais: <em class="q">"diagnóstico prévio da equipe"</em>.</p>
+    <div class="fix"><b>AJUSTE</b><p>Transformar o diagnóstico em <strong>produto de entrada pago</strong>, com nome, escopo e prazo próprios. Ele faz três trabalhos ao mesmo tempo: qualifica quem tem orçamento de verdade, <strong>gera o baseline que resolve o Ajuste 05</strong>, e transforma a venda grande em consequência natural do que o diagnóstico revelou — em vez de uma decisão fria tomada a partir de um PDF.</p></div>
+  </div>
+
+  <div class="ach info">
+    <div class="ach-n">O ENCADEAMENTO QUE ISSO CRIA</div>
+    <p><strong>Conteúdo</strong> → material de valor na DM → <strong>conversa</strong> → Diagnóstico da Área (pago, baixo risco) → <strong>o problema fica visível e medido</strong> → o programa vira a resposta óbvia para o que o diagnóstico mostrou.</p>
+    <p>Repare que nesse caminho <strong>você nunca precisa convencer</strong>. O diagnóstico convence.</p>
+  </div>
+  <div class="pg">08</div>
+</div>
+
+<!-- ═════ 9 · DUAS EMPRESAS ═════ -->
+<div class="sheet">
+  <div class="rt"><span class="rt-l">BLOCO C · FUNIL</span><span class="rt-r">ACHADO 9</span></div>
+  <h2>Duas empresas dentro do <em>mesmo</em> perfil</h2><div class="h2-rule"></div>
+
+  <div class="ach crit">
+    <div class="ach-n">AJUSTE 09 · IMPACTO ALTO · DECISÃO ESTRATÉGICA</div>
+    <div class="ach-t">Os documentos não concordam sobre quem é o cliente</div>
+    <table style="margin-top:10px">
+      <thead><tr><th style="width:52mm">Documento</th><th>Quem ele diz que é o cliente</th></tr></thead>
+      <tbody>
+        <tr><td>Briefing de público — PF</td><td>O líder pessoa física. Produto digital.</td></tr>
+        <tr><td>Produto, pilares e dores</td><td>O líder, com 40+ dores físicas, mentais e emocionais.</td></tr>
+        <tr><td>Briefing de público — LinkedIn</td><td>Inverte: <em class="q">"o líder vive o problema; o RH e o executivo sentem o impacto, têm orçamento e procuram solução"</em>.</td></tr>
+        <tr><td>Mapeamento corporativo</td><td>RH e diretoria.</td></tr>
+        <tr><td>Posicionamento e mapa</td><td>Empresas — RH, BP, T&amp;D, diretores, CEOs, sócios.</td></tr>
+        <tr><td>Proposta Recovery</td><td>Empresa, aos cuidados do RH.</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:10px">São <strong>dois negócios diferentes</strong>: níveis de consciência diferentes, preços diferentes, canais diferentes e ciclos de decisão diferentes. Tentar servir os dois no mesmo perfil é o que faz a headline atual precisar de cinco separadores para explicar o que você faz.</p>
+  </div>
+
+  <div class="ach">
+    <div class="ach-n">A RECOMENDAÇÃO</div>
+    <div class="ach-t">90 dias de B2B puro — e a frente PF entra em espera, não em extinção</div>
+    <p>O que sustenta essa escolha não é preferência: é que <strong>a única oferta com preço definido e negociação em andamento é a B2B</strong>. A frente PF ainda não tem produto, preço nem canal definidos — abandoná-la agora não custa nada, e voltar a ela depois custa pouco.</p>
+    <p>E o seu próprio briefing de LinkedIn já tinha chegado nessa conclusão:</p>
+    <div class="quote">Não abandone o público líder. Reposicione a hierarquia. Comprador: RH / DHO / Diretor Executivo. Beneficiário: líderes e gestores.
+      <span>— Briefing de público · LinkedIn</span></div>
+    <p><strong>O líder não sai da história.</strong> Ele continua sendo o personagem de todo conteúdo, de toda dor e de toda transformação. O que muda é para quem o material é escrito — e quem assina.</p>
+  </div>
+
+  <div class="ach info">
+    <div class="ach-n">QUANDO A FRENTE PF VOLTA</div>
+    <p>Depois que o B2B tiver pipeline previsível. E quando voltar, volta <strong>como oferta separada</strong>, com preço e canal próprios — aproveitando toda a base de dores emocionais já mapeada, que é excelente e não se perde.</p>
+  </div>
+  <div class="pg">09</div>
+</div>
+
+<!-- ═════ 10 · PRIORIDADE ═════ -->
+<div class="sheet">
+  <div class="rt"><span class="rt-l">PLANO DE AJUSTE</span><span class="rt-r">ORDEM DE EXECUÇÃO</span></div>
+  <h2>O que mexer <em>primeiro</em></h2><div class="h2-rule"></div>
+
+  <p class="lead">Nove ajustes não se fazem no mesmo dia. Esta é a ordem por relação entre impacto e esforço — os quatro primeiros mudam a conversa comercial em menos de uma semana de trabalho.</p>
+
+  <div class="prio"><div class="prio-n">1</div><div><div class="prio-t">Reorganizar a escada por escopo</div>
+    <div class="prio-d">Mesmos R$15.000 / R$21.000 / R$27.000. Só muda o que separa um nível do outro. Tira a sessão com o time de dentro do brinde.</div></div>
+    <div class="prio-w">1 TARDE<br>IMPACTO MUITO ALTO</div></div>
+
+  <div class="prio"><div class="prio-n">2</div><div><div class="prio-t">Reescrever a garantia</div>
+    <div class="prio-d">Uma frase. Custo real menor que o da garantia atual, percepção de risco muito menor.</div></div>
+    <div class="prio-w">15 MINUTOS<br>IMPACTO MÉDIO</div></div>
+
+  <div class="prio"><div class="prio-n">3</div><div><div class="prio-t">Nomear a jornada e traduzir a Etapa 1</div>
+    <div class="prio-d">Decisão sua. Depois disso, o nome entra na proposta, na headline e no "Sobre" do LinkedIn.</div></div>
+    <div class="prio-w">1 DECISÃO<br>IMPACTO ALTO</div></div>
+
+  <div class="prio"><div class="prio-n">4</div><div><div class="prio-t">Colocar a sua história e o seu resultado na proposta</div>
+    <div class="prio-d">Meia página de história na abertura, e o resultado da sua área (clima top 3, celeiro de talentos, queda de turnover) no lugar de mais um dado global.</div></div>
+    <div class="prio-w">1 TARDE<br>IMPACTO ALTO</div></div>
+
+  <div class="prio"><div class="prio-n">5</div><div><div class="prio-t">Reconciliar a promessa de 90 dias com a duração real</div>
+    <div class="prio-d">"90 dias para os primeiros comportamentos mudarem, 5 a 6 meses para o indicador da área mudar."</div></div>
+    <div class="prio-w">1 FRASE<br>IMPACTO ALTO</div></div>
+
+  <div class="prio"><div class="prio-n">6</div><div><div class="prio-t">Desenhar os três marcos de medição</div>
+    <div class="prio-d">Baseline, meio e fim. Exige acordar com o RH o que será medido antes de começar — é a mudança que mais altera o desenho da venda.</div></div>
+    <div class="prio-w">1 ENCONTRO<br>IMPACTO MUITO ALTO</div></div>
+
+  <div class="prio"><div class="prio-n">7</div><div><div class="prio-t">Criar o Diagnóstico de Liderança da Área</div>
+    <div class="prio-d">Nome, escopo, prazo, preço e entregável. Depende do item 6, porque o baseline é parte do que ele entrega.</div></div>
+    <div class="prio-w">1 SEMANA<br>IMPACTO MUITO ALTO</div></div>
+
+  <div class="prio"><div class="prio-n">8</div><div><div class="prio-t">Consolidar o eixo B2B no perfil e no conteúdo</div>
+    <div class="prio-d">Headline, "Sobre", setor do perfil e capa. Os textos já existem prontos no seu arquivo de bios — falta aplicar.</div></div>
+    <div class="prio-w">1 TARDE<br>IMPACTO ALTO</div></div>
+
+  <div class="prio"><div class="prio-n">9</div><div><div class="prio-t">Construir a primeira prova de cliente</div>
+    <div class="prio-d">Depoimento autorizado do primeiro cliente entregue. É o único item que depende de tempo e não de decisão.</div></div>
+    <div class="prio-w">EM ANDAMENTO<br>IMPACTO ALTO</div></div>
+
+  <div class="ach info" style="margin-top:14px">
+    <div class="ach-n">O QUE ACONTECE SE SÓ OS QUATRO PRIMEIROS FOREM FEITOS</div>
+    <p>A proposta deixa de ser comparável por hora, a garantia para de gerar dúvida, o mecanismo ganha nome e a autoridade fica proprietária. <strong>É o suficiente para mudar a conversa da próxima reunião comercial</strong> — os outros cinco constroem o resto do sistema.</p>
+  </div>
+  <div class="pg">10</div>
+</div>
+
+<!-- ═════ 11 · PERGUNTAS ═════ -->
+<div class="sheet">
+  <div class="rt"><span class="rt-l">PRÓXIMO PASSO</span><span class="rt-r">DECISÕES DA LUCIA</span></div>
+  <h2>Seis perguntas que só <em>você</em> responde</h2><div class="h2-rule"></div>
+
+  <p class="lead">Nada aqui avança sem estas respostas. Cinco são decisões; a primeira é uma verificação que pode alterar o próprio diagnóstico.</p>
+
+  <div class="perg"><div class="n">PERGUNTA 01</div>
+    <div class="t">Existe algum cliente já entregue que não apareceu nos documentos?</div>
+    <p>Case, depoimento, contrato assinado, empresa atendida. Se existir, o Ajuste 07 muda de tamanho — e a proposta ganha prova imediatamente, sem esperar.</p></div>
+
+  <div class="perg"><div class="n">PERGUNTA 02</div>
+    <div class="t">Qual é o nome da jornada de 4 etapas?</div>
+    <p>Sem nome, o mecanismo não existe comercialmente. É a decisão que destrava os Ajustes 01 e 03, e ela é sua — não é algo que alguém de fora deva nomear pela marca.</p></div>
+
+  <div class="perg"><div class="n">PERGUNTA 03</div>
+    <div class="t">Você topa pedir baseline ao RH antes de começar?</div>
+    <p>Clima ou eNPS da área, turnover de 12 meses e três comportamentos observáveis. <strong>É a mudança que mais altera o desenho da venda</strong> — porque transforma a conversa inicial em diagnóstico, e não em apresentação. Se não topar, o Ajuste 05 precisa de outro caminho.</p></div>
+
+  <div class="perg"><div class="n">PERGUNTA 04</div>
+    <div class="t">Quanto tempo seu o Diagnóstico da Área consome de verdade?</div>
+    <p>Sem isso não dá para precificar o produto de entrada com honestidade. A régua é: alto o suficiente para qualificar, baixo o suficiente para não precisar de comitê.</p></div>
+
+  <div class="perg"><div class="n">PERGUNTA 05</div>
+    <div class="t">A frente PF entra em espera por 90 dias?</div>
+    <p>Não é abandono — é sequência. Mas precisa ser uma decisão consciente, porque ela define para quem todo o conteúdo dos próximos três meses é escrito.</p></div>
+
+  <div class="perg"><div class="n">PERGUNTA 06</div>
+    <div class="t">O que na proposta atual é inegociável para você?</div>
+    <p>Pode haver coisa aqui que faz sentido no papel e não faz sentido no seu jeito de trabalhar. Prefiro saber agora do que descobrir depois de reescrever a proposta inteira.</p></div>
+
+  <div class="ach ok" style="margin-top:12px">
+    <div class="ach-n">UMA OBSERVAÇÃO FINAL</div>
+    <p>Nenhum dos nove pontos é sobre a qualidade do que você entrega. Todos são sobre <strong>como o que você entrega está embalado, medido e apresentado</strong>. O método está bem construído — o que está custando venda é a distância entre o que ele faz e o que a proposta consegue provar que ele faz.</p>
+  </div>
+  <div class="pg">11</div>
+</div>
+
+<!-- ═════ 12 · FECHO ═════ -->
+<div class="sheet dark">
+  <div class="cv">
+    <div class="cv-eb">Resumo em uma frase</div>
+    <h1>O problema<br>não é o método.<br>É a <em>embalagem</em>.</h1>
+    <div class="cv-sub">A jornada funciona, a autoridade é proprietária e o mapa de dores é excelente. O que falta é nome no mecanismo, número na promessa, degrau no funil e prova na proposta.</div>
+    <div class="cv-line"></div>
+    <div class="cv-meta">
+      Análise preparada a partir de 9 documentos<br>
+      <b>Igor Miguel · Método Demanda Infinita®</b> · 25 de agosto de 2026
+    </div>
+    <div class="sig">
+      <div class="sig-n">Instituto Eleve o Ser</div>
+      <div class="sig-i">ELEVEOSER.COM</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
