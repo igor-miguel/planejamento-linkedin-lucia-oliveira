@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Headline e Capa — Lucia Oliveira · Instituto Eleve o Ser</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--uva:#1A1218;--latao:#9C8252;--latao-cl:#C4A96A;--marmore:#E8E2D5;
+  --marmore-s:#F4EFE6;--terra:#3A2B26;--vinho:#5E4346;--azul:#2C4A6E;--verde:#2E6B4F}
+html,body{background:#D9D3C7}
+body{font-family:'Montserrat',sans-serif;color:var(--terra);font-weight:300;
+  -webkit-print-color-adjust:exact;print-color-adjust:exact}
+.sheet{width:210mm;min-height:297mm;background:var(--marmore-s);margin:0 auto 10mm;
+  padding:16mm 18mm 14mm;position:relative;box-shadow:0 3px 26px rgba(26,18,24,.18);
+  page-break-after:always;overflow:hidden}
+.sheet:last-child{page-break-after:auto}
+.rt{display:flex;justify-content:space-between;align-items:baseline;
+  border-bottom:1px solid rgba(156,130,82,.28);padding-bottom:7px;margin-bottom:14px}
+.rt-l{font-family:'Cinzel',serif;font-size:7.5px;font-weight:700;letter-spacing:3px;color:var(--latao)}
+.rt-r{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2px;color:rgba(58,43,38,.42)}
+.pg{position:absolute;bottom:8mm;right:18mm;font-family:'Cinzel',serif;font-size:8px;
+  letter-spacing:2px;color:rgba(58,43,38,.34)}
+h1{font-family:'Philosopher',serif;font-size:27px;font-weight:700;color:var(--uva);line-height:1.16;margin-bottom:4px}
+h1 em{font-style:italic;color:var(--vinho)}
+.rule{height:1px;background:linear-gradient(to right,var(--latao),transparent);opacity:.45;margin-bottom:14px}
+.lead{font-size:11px;line-height:1.8;margin-bottom:14px;max-width:165mm}
+p{font-size:10.5px;line-height:1.78;margin-bottom:7px}
+strong{font-weight:600;color:var(--uva)}
+em.q{font-family:'Philosopher',serif;font-style:italic;color:var(--vinho)}
+h3{font-family:'Philosopher',serif;font-size:16px;font-weight:700;color:var(--uva);
+  margin:16px 0 8px;padding-bottom:5px;border-bottom:1px solid rgba(156,130,82,.2)}
+
+/* HEADLINE */
+.hl{background:#fff;margin-bottom:11px;box-shadow:0 1px 9px rgba(58,43,38,.06);
+  border-left:3px solid var(--latao);break-inside:avoid;page-break-inside:avoid}
+.hl-top{display:flex;justify-content:space-between;align-items:center;
+  padding:9px 15px 0}
+.hl-n{font-family:'Cinzel',serif;font-size:8px;font-weight:700;letter-spacing:2.4px;color:var(--latao)}
+.hl-ch{font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.5px;color:rgba(58,43,38,.42)}
+.hl-tx{font-family:'Philosopher',serif;font-size:13.5px;color:var(--uva);line-height:1.55;
+  padding:7px 15px 10px;font-weight:400}
+.hl-tx b{font-weight:700}
+.hl-meta{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid rgba(156,130,82,.16)}
+.hl-cell{padding:8px 15px;font-size:9.5px;line-height:1.62}
+.hl-cell:first-child{border-right:1px solid rgba(156,130,82,.16)}
+.hl-cell b{font-family:'Cinzel',serif;font-size:7px;letter-spacing:1.8px;color:var(--latao);
+  display:block;margin-bottom:3px;font-weight:700}
+
+/* CAPA — mockup 1584x396 escalado */
+.cap{margin-bottom:13px;break-inside:avoid;page-break-inside:avoid}
+.cap-h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.cap-n{font-family:'Cinzel',serif;font-size:8px;font-weight:700;letter-spacing:2.4px;color:var(--latao)}
+.cap-t{font-family:'Philosopher',serif;font-size:14px;font-weight:700;color:var(--uva)}
+.mock{width:174mm;height:43.5mm;background:var(--uva);position:relative;overflow:hidden;
+  box-shadow:0 2px 12px rgba(58,43,38,.14)}
+.mock .safe{position:absolute;left:0;bottom:0;width:30mm;height:22mm;
+  border:1px dashed rgba(156,130,82,.4);border-left:none;border-bottom:none}
+.mock .safe span{position:absolute;bottom:2mm;left:2mm;font-family:'Cinzel',serif;
+  font-size:5px;letter-spacing:1px;color:rgba(156,130,82,.55)}
+.mk-in{position:absolute;inset:0;padding:6mm 9mm 6mm 34mm;display:flex;
+  flex-direction:column;justify-content:center}
+.mk-in.full{padding-left:9mm}
+.mk-lbl{font-family:'Cinzel',serif;font-size:6px;font-weight:700;letter-spacing:3px;
+  color:var(--latao);margin-bottom:2.5mm}
+.mk-fr{font-family:'Philosopher',serif;font-size:15px;color:var(--marmore);line-height:1.32}
+.mk-fr em{font-style:italic;color:var(--latao-cl)}
+.mk-fr.sm{font-size:12.5px}
+.mk-sub{font-size:7px;color:rgba(232,226,213,.5);margin-top:2.5mm;letter-spacing:.6px}
+.mk-rule{width:12mm;height:1.5px;background:var(--latao);margin-bottom:2.5mm}
+/* variantes */
+.mk-split{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1px 1fr;
+  align-items:center;padding:5mm 9mm 5mm 34mm}
+.mk-div{background:rgba(156,130,82,.35);height:60%;align-self:center}
+.mk-col{padding:0 6mm}
+.mk-col .k{font-family:'Cinzel',serif;font-size:5.5px;letter-spacing:2px;
+  color:rgba(232,226,213,.4);margin-bottom:1.5mm}
+.mk-col .v{font-family:'Philosopher',serif;font-size:14px;color:var(--marmore)}
+.mk-col.hi .v{color:var(--latao-cl);font-style:italic}
+.mk-sym{position:absolute;right:11mm;top:50%;transform:translateY(-50%);display:flex;
+  align-items:flex-end;gap:2mm;height:14mm}
+.mk-sym i{display:block;width:2.2mm;background:rgba(156,130,82,.5);border-radius:1px}
+.mk-sym i:nth-child(1){height:35%}.mk-sym i:nth-child(2){height:55%}
+.mk-sym i:nth-child(3){height:75%}.mk-sym i:nth-child(4){height:100%;background:var(--latao-cl)}
+.mk-cred{display:flex;gap:5mm;margin-top:3mm;flex-wrap:wrap}
+.mk-cred span{font-size:6.5px;color:rgba(232,226,213,.55);letter-spacing:.5px;
+  border-left:1px solid rgba(156,130,82,.4);padding-left:2.5mm}
+.mk-name{font-family:'Philosopher',serif;font-size:19px;color:var(--marmore);margin-bottom:1mm}
+.cap-nota{font-size:9.5px;line-height:1.65;color:rgba(58,43,38,.72);margin-top:5px;
+  padding-left:2px;max-width:174mm}
+.cap-nota b{color:var(--uva);font-weight:600}
+
+.box{background:#fff;border-left:3px solid var(--latao);padding:13px 16px;margin:12px 0;
+  box-shadow:0 1px 9px rgba(58,43,38,.05);break-inside:avoid}
+.box.a{border-left-color:var(--azul);background:#F3F6FA}
+.box.v{border-left-color:var(--verde);background:#F4F8F5}
+.box-l{font-family:'Cinzel',serif;font-size:7.5px;font-weight:700;letter-spacing:2.4px;
+  color:var(--latao);margin-bottom:6px;text-transform:uppercase}
+.box.a .box-l{color:var(--azul)}.box.v .box-l{color:var(--verde)}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+ul{margin:5px 0 7px 15px}li{font-size:10px;line-height:1.7;margin-bottom:4px}
+table{width:100%;border-collapse:collapse;font-size:9.5px;background:#fff;margin:9px 0}
+th{background:var(--uva);color:var(--marmore);font-family:'Cinzel',serif;font-size:7px;
+  font-weight:600;letter-spacing:1.3px;text-transform:uppercase;padding:7px 9px;text-align:left}
+td{padding:7px 9px;border-bottom:1px solid rgba(156,130,82,.15);vertical-align:top;line-height:1.6}
+tr:last-child td{border-bottom:none}
+tbody tr:nth-child(even){background:rgba(244,239,230,.75)}
+.tight td,.tight th{padding:6px 9px}
+.tight h3{margin:12px 0 6px}
+.tight .box{padding:11px 16px;margin:10px 0}
+.tight .cap{margin-bottom:11px}
+@media print{
+  html,body{background:#fff}
+  .sheet{margin:0;box-shadow:none}
+  @page{size:A4;margin:0}
+}
+</style>
+</head>
+<body>
+
+<!-- ═════ 1 · HEADLINES ═════ -->
+<div class="sheet">
+  <div class="rt"><span class="rt-l">INSTITUTO ELEVE O SER</span><span class="rt-r">HEADLINE · LINKEDIN</span></div>
+  <h1>Cinco headlines para <em>escolher</em></h1>
+  <div class="rule"></div>
+  <div class="lead">Todas no eixo B2B — escritas para quem assina o cheque (RH, DHO, diretoria), com o líder como personagem. O limite do LinkedIn é 220 caracteres; as cinco cabem com folga, o que importa porque no celular só as primeiras linhas aparecem.</div>
+
+  <div class="hl">
+    <div class="hl-top"><span class="hl-n">01 · TERRITÓRIO DE MARCA</span><span class="hl-ch">135 CARACTERES</span></div>
+    <div class="hl-tx"><b>Eu trabalho onde o resultado da empresa encontra o comportamento do líder</b> | Mentoria de liderança para empresas | Instituto Eleve o Ser</div>
+    <div class="hl-meta">
+      <div class="hl-cell"><b>PRA QUEM FUNCIONA</b>RH e diretoria que ainda não sabem nomear o problema. É a mais ampla das cinco.</div>
+      <div class="hl-cell"><b>POR QUE FUNCIONA</b>Não descreve o que ela faz — descreve o território que ela ocupa. É a única frase aqui que nenhum concorrente consegue repetir sem soar cópia.</div>
+    </div>
+  </div>
+
+  <div class="hl">
+    <div class="hl-top"><span class="hl-n">02 · O PROBLEMA QUE RESOLVE</span><span class="hl-ch">136 CARACTERES</span></div>
+    <div class="hl-tx"><b>Transformo gestores tecnicamente bons em líderes de verdade</b> | Desenvolvimento de liderança para médias e grandes empresas | Master Coach</div>
+    <div class="hl-meta">
+      <div class="hl-cell"><b>PRA QUEM FUNCIONA</b>Head de RH que já tem o problema nomeado e está procurando fornecedor.</div>
+      <div class="hl-cell"><b>POR QUE FUNCIONA</b>É a dor nº1 do mapa, dita em uma linha. Quem promoveu especialista sem preparar se reconhece na hora.</div>
+    </div>
+  </div>
+
+  <div class="hl">
+    <div class="hl-top"><span class="hl-n">03 · PROVOCATIVA</span><span class="hl-ch">121 CARACTERES</span></div>
+    <div class="hl-tx"><b>Desenvolvo líderes que entregam resultado sem destruir seus times</b> | Mentoria de liderança e times | Instituto Eleve o Ser</div>
+    <div class="hl-meta">
+      <div class="hl-cell"><b>PRA QUEM FUNCIONA</b>Diretoria e CEO. É a que mais gera clique de quem tem esse gestor e não sabe o que fazer com ele.</div>
+      <div class="hl-cell"><b>POR QUE FUNCIONA</b>Nomeia o inominável — o líder que bate meta e queima gente. Mais arriscada e mais memorável.</div>
+    </div>
+  </div>
+
+  <div class="hl">
+    <div class="hl-top"><span class="hl-n">04 · LINGUAGEM DE NEGÓCIO</span><span class="hl-ch">136 CARACTERES</span></div>
+    <div class="hl-tx"><b>Liderança que sustenta execução, retenção e sucessão</b> | Mentoria individual e programas para camadas de liderança | Instituto Eleve o Ser</div>
+    <div class="hl-meta">
+      <div class="hl-cell"><b>PRA QUEM FUNCIONA</b>Diretor executivo e CEO. É a única que fala a língua de quem aprova orçamento.</div>
+      <div class="hl-cell"><b>POR QUE FUNCIONA</b>Zero vocabulário de desenvolvimento humano. Três substantivos de negócio — e "camadas de liderança" já sinaliza contrato grande.</div>
+    </div>
+  </div>
+
+  <div class="hl">
+    <div class="hl-top"><span class="hl-n">05 · AUTORIDADE PRÓPRIA</span><span class="hl-ch">133 CARACTERES</span></div>
+    <div class="hl-tx"><b>Fui diretora e aprendi que resultado obtido pelo medo tem prazo de validade</b> | Mentora de Líderes e Times | Master Coach | Eleve o Ser</div>
+    <div class="hl-meta">
+      <div class="hl-cell"><b>PRA QUEM FUNCIONA</b>Todo mundo — mas performa melhor com quem já viu algum conteúdo dela antes.</div>
+      <div class="hl-cell"><b>POR QUE FUNCIONA</b>Abre com credencial e fecha com tese, na mesma frase. É a única que responde "por que ela?" antes de a pessoa perguntar.</div>
+    </div>
+  </div>
+  <div class="pg">01</div>
+</div>
+
+<!-- ═════ 2 · COMO ESCOLHER ═════ -->
+<div class="sheet">
+  <div class="rt"><span class="rt-l">HEADLINE</span><span class="rt-r">COMO ESCOLHER</span></div>
+  <h1>Qual delas, e <em>por quê</em></h1>
+  <div class="rule"></div>
+
+  <h3>A recomendação</h3>
+  <div class="box v">
+    <div class="box-l">SE FOR PRA ESCOLHER UMA HOJE</div>
+    <p><strong>A 02.</strong> Não é a mais bonita — a 01 e a 05 são. É a que mais converte agora, porque o perfil ainda não tem volume de conteúdo: quem chega ali chega frio, procurando resolver um problema, e a 02 é a única que diz o problema com as palavras que o RH usa internamente.</p>
+    <p style="margin-top:7px"><strong>A 01 vira a headline definitiva</strong> depois que o conteúdo estiver rodando e o território já for reconhecível. Território de marca funciona quando já existe marca; até lá, problema nomeado vende mais.</p>
+  </div>
+
+  <h3>Comparação rápida</h3>
+  <table>
+    <thead><tr><th style="width:12mm">#</th><th>Ângulo</th><th style="width:34mm">Melhor leitor</th><th style="width:26mm">Risco</th></tr></thead>
+    <tbody>
+      <tr><td>01</td><td>Território de marca</td><td>RH e diretoria, frio</td><td>Abstrata demais sem conteúdo por trás</td></tr>
+      <tr><td>02</td><td>Problema que resolve</td><td>Head de RH procurando fornecedor</td><td>Baixo</td></tr>
+      <tr><td>03</td><td>Provocativa</td><td>Diretoria e CEO</td><td>Pode soar acusatória pro gestor que se vê nela</td></tr>
+      <tr><td>04</td><td>Linguagem de negócio</td><td>Diretor executivo, CEO</td><td>Fria — some o lado humano que é o diferencial dela</td></tr>
+      <tr><td>05</td><td>Autoridade própria</td><td>Quem já viu conteúdo dela</td><td>Longa pra quem não conhece</td></tr>
+    </tbody>
+  </table>
+
+  <h3>O que muda em relação à headline atual</h3>
+  <p>A que está no ar hoje é: <em class="q">"Mentora de Líderes e Times | Líderes que transformam. Times que movem empresas. | Master Coach | Inteligência Emocional"</em>.</p>
+  <p>Ela não está errada — só está descrevendo <strong>o que a Lucia é</strong>, não o problema que ela resolve. E "Inteligência Emocional" no fim puxa a leitura pro território de desenvolvimento pessoal, que é justamente o que o eixo B2B precisa evitar. As cinco acima invertem isso.</p>
+
+  <div class="box a">
+    <div class="box-l">TRÊS REGRAS PRA QUALQUER AJUSTE FUTURO</div>
+    <ul>
+      <li><strong>O primeiro bloco carrega o peso.</strong> No celular, o LinkedIn corta a headline cedo — o que estiver depois do segundo "|" pode nunca ser lido.</li>
+      <li><strong>Credencial vai no fim, nunca no começo.</strong> "Master Coach" abrindo a headline compete com milhares de perfis idênticos.</li>
+      <li><strong>Nada de "Inteligência Emocional" e "autoconhecimento" na headline.</strong> São os bastidores do método, não o produto — regra da própria Lucia, no guia de tom de voz dela.</li>
+    </ul>
+  </div>
+  <div class="pg">02</div>
+</div>
+
+<!-- ═════ 3 · CAPAS 1-3 ═════ -->
+<div class="sheet">
+  <div class="rt"><span class="rt-l">CAPA DO LINKEDIN</span><span class="rt-r">CONCEITOS 1 A 3</span></div>
+  <h1>Cinco capas para <em>escolher</em></h1>
+  <div class="rule"></div>
+  <div class="lead">Mockups na proporção real (1584 × 396 px). A área tracejada é onde a <strong>foto de perfil cobre a capa</strong> — nada de texto ali. Todas usam a paleta e as fontes do brandbook, sem exceção.</div>
+
+  <div class="cap">
+    <div class="cap-h"><span class="cap-n">CAPA 01</span><span class="cap-t">A tese</span></div>
+    <div class="mock">
+      <div class="mk-in">
+        <div class="mk-lbl">INSTITUTO ELEVE O SER</div>
+        <div class="mk-rule"></div>
+        <div class="mk-fr">Resultado obtido pelo <em>medo</em><br>tem prazo de validade.</div>
+      </div>
+      <div class="safe"><span>FOTO</span></div>
+    </div>
+    <div class="cap-nota"><b>Quando usar:</b> é a mais forte das cinco e a que mais combina com o conteúdo do plano — a tese central aparece em post de topo três vezes no trimestre. Quem lê a capa e depois lê o post reconhece a mesma voz.</div>
+  </div>
+
+  <div class="cap">
+    <div class="cap-h"><span class="cap-n">CAPA 02</span><span class="cap-t">O território</span></div>
+    <div class="mock">
+      <div class="mk-in">
+        <div class="mk-lbl">MENTORIA DE LIDERANÇA · EMPRESAS</div>
+        <div class="mk-rule"></div>
+        <div class="mk-fr sm">Eu trabalho onde o <em>resultado</em> da empresa<br>encontra o <em>comportamento</em> do líder.</div>
+      </div>
+      <div class="safe"><span>FOTO</span></div>
+    </div>
+    <div class="cap-nota"><b>Quando usar:</b> se ela escolher a headline 01, esta capa é a par natural — repete o território sem repetir a frase inteira. Se escolher outra headline, esta capa faz o trabalho de posicionar sozinha.</div>
+  </div>
+
+  <div class="cap">
+    <div class="cap-h"><span class="cap-n">CAPA 03</span><span class="cap-t">Institucional com símbolo</span></div>
+    <div class="mock">
+      <div class="mk-in">
+        <div class="mk-lbl">INSTITUTO ELEVE O SER</div>
+        <div class="mk-rule"></div>
+        <div class="mk-fr sm">Líderes que se conhecem <em>transformam times</em>.<br>Times coesos movem empresas.</div>
+        <div class="mk-sub">MENTORIA INDIVIDUAL · TREINAMENTOS CORPORATIVOS · PROGRAMA ELEVE</div>
+      </div>
+      <div class="mk-sym"><i></i><i></i><i></i><i></i></div>
+      <div class="safe"><span>FOTO</span></div>
+    </div>
+    <div class="cap-nota"><b>Quando usar:</b> é a mais institucional e a única que traz o símbolo de elevação. Boa se ela quiser que a capa comunique o Instituto como marca, não ela como pessoa. <b>Ressalva:</b> a frase é a premissa do "Sobre" atual — usa vocabulário de autoconhecimento ("líderes que se conhecem"), que o guia dela manda evitar no corporativo. É a de menor risco visual e a de maior risco de posicionamento.</div>
+  </div>
+  <div class="pg">03</div>
+</div>
+
+<!-- ═════ 4 · CAPAS 4-5 ═════ -->
+<div class="sheet tight">
+  <div class="rt"><span class="rt-l">CAPA DO LINKEDIN</span><span class="rt-r">CONCEITOS 4 E 5</span></div>
+  <h1>As duas <em>mais diretas</em></h1>
+  <div class="rule"></div>
+
+  <div class="cap">
+    <div class="cap-h"><span class="cap-n">CAPA 04</span><span class="cap-t">Os dois lados</span></div>
+    <div class="mock">
+      <div class="mk-split">
+        <div class="mk-col"><div class="k">O QUE A EMPRESA MEDE</div><div class="v">resultado</div></div>
+        <div class="mk-div"></div>
+        <div class="mk-col hi"><div class="k">O QUE SUSTENTA O RESULTADO</div><div class="v">comportamento</div></div>
+      </div>
+      <div class="safe"><span>FOTO</span></div>
+    </div>
+    <div class="cap-nota"><b>Quando usar:</b> a mais escaneável — o leitor entende em menos de um segundo, sem ler frase. Funciona especialmente bem com a headline 04 (linguagem de negócio), porque a capa devolve o lado humano que aquela headline deixa de fora.</div>
+  </div>
+
+  <div class="cap">
+    <div class="cap-h"><span class="cap-n">CAPA 05</span><span class="cap-t">Nome e credencial</span></div>
+    <div class="mock">
+      <div class="mk-in">
+        <div class="mk-name">Lucia Oliveira</div>
+        <div class="mk-lbl" style="margin-bottom:0">MENTORA DE LÍDERES E TIMES</div>
+        <div class="mk-cred">
+          <span>20+ anos de carreira corporativa até a diretoria</span>
+          <span>Master Coach</span>
+          <span>Coautora de Mulheres Extraordinárias</span>
+        </div>
+      </div>
+      <div class="safe"><span>FOTO</span></div>
+    </div>
+    <div class="cap-nota"><b>Quando usar:</b> a mais convencional, e a única que carrega prova. Boa se o objetivo do trimestre for prospecção ativa — quem recebe convite de conexão dela abre o perfil e vê a credencial antes de qualquer texto. <b>Ressalva:</b> não posiciona, só apresenta. Combina mal com a headline 05, que já faz esse trabalho.</div>
+  </div>
+
+  <div class="box v">
+    <div class="box-l">A RECOMENDAÇÃO</div>
+    <p><strong>Capa 01 com headline 02.</strong> A headline nomeia o problema com as palavras do RH; a capa entrega a tese que explica por que aquele problema existe. Uma faz o trabalho racional, a outra o emocional — e nenhuma repete a outra.</p>
+    <p style="margin-top:7px">O par a evitar é <strong>capa 05 com headline 05</strong>: as duas dizem a mesma coisa, e o perfil inteiro vira currículo.</p>
+  </div>
+
+  <h3>Especificação técnica</h3>
+  <table>
+    <thead><tr><th style="width:38mm">Item</th><th>Valor</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Dimensão</strong></td><td>1584 × 396 px (proporção 4:1). Exportar em PNG.</td></tr>
+      <tr><td><strong>Zona segura</strong></td><td>Evitar os ~270 px da esquerda e os ~200 px de baixo — a foto cobre. No celular o corte lateral é maior: manter o texto no miolo vertical.</td></tr>
+      <tr><td><strong>Fundo</strong></td><td>Tinta-uva <span style="font-family:monospace">#1A1218</span>. Nunca branco puro — regra 01 do brandbook.</td></tr>
+      <tr><td><strong>Destaque</strong></td><td>Latão <span style="font-family:monospace">#9C8252</span> · Latão claro <span style="font-family:monospace">#C4A96A</span> para a palavra em itálico</td></tr>
+      <tr><td><strong>Texto claro</strong></td><td>Mármore <span style="font-family:monospace">#E8E2D5</span></td></tr>
+      <tr><td><strong>Tipografia</strong></td><td>Label em Cinzel caixa alta, letter-spacing 4-6px · frase em Philosopher, itálico só na palavra de ênfase · apoio em Montserrat 300</td></tr>
+      <tr><td><strong>Régua</strong></td><td>Filete de 60 × 2 px em latão entre o label e a frase — em todas as cinco, é o que amarra as capas à identidade</td></tr>
+    </tbody>
+  </table>
+  <div class="pg">04</div>
+</div>
+
+</body>
+</html>
